@@ -60,6 +60,8 @@ dependencies:
   image_picker:
   intl:
   skeletonizer: ^2.1.0+1
+  easy_localization: ^3.0.7+1
+  timeago:
 
 
 dev_dependencies:
@@ -86,7 +88,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/images/pngs/
+    - assets/images/svgs/
+    - assets/images/pngs/
+    - assets/images/jpgs/
+    - assets/images/jpegs/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,6 +106,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo/Cairo-VariableFont_slnt,wght.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

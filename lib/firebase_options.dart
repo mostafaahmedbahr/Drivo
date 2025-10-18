@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBmCimCPIkKt4nhXaSLQwAyDCQk6kUcrNE',
-    appId: '1:126355325239:android:cfb70070a23f7ff7c81ab2',
+    appId: '1:126355325239:android:5e1e3d5c79bbb1ebc81ab2',
     messagingSenderId: '126355325239',
     projectId: 'moov-customer-app-b4ffd',
     storageBucket: 'moov-customer-app-b4ffd.firebasestorage.app',
@@ -59,10 +59,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyD0Oq_yhS6hiNXlPJ1h-KKRwuiRoOZ3IDU',
-    appId: '1:126355325239:ios:5865aa9a6ae12f27c81ab2',
+    appId: '1:126355325239:ios:e33931986a2198ecc81ab2',
     messagingSenderId: '126355325239',
     projectId: 'moov-customer-app-b4ffd',
     storageBucket: 'moov-customer-app-b4ffd.firebasestorage.app',
-    iosBundleId: 'com.example.drivo',
+    iosBundleId: 'com.moov.customer.drivo.app',
   );
+
 }

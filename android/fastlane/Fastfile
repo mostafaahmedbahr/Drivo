@@ -1,0 +1,20 @@
+
+default_platform(:android)
+
+# To run the lane, execute the following command:
+# bundle exec fastlane first_fastlane_action
+
+platform :android do
+  desc "Testing"
+  lane :fastlane_action do
+    sh "flutter build apk --split-per-abi"
+    firebase_app_distribution(
+        app: "1:126355325239:android:5e1e3d5c79bbb1ebc81ab2",
+        firebase_cli_token: "1//03BLCHuegA9HYCgYIARAAGAMSNwF-L9IrmtSbtbd4_V5wgFIM_WaAa-HDLTIdmzUwsZBianQByF95G9SfuhwRPmYWOGP3I1vDha0",
+        android_artifact_type: "APK",
+        android_artifact_path: "../build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk",
+        testers: "mustafa.bahr12323@gmail.com",
+        release_notes: "",
+  )
+  end
+end

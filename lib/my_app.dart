@@ -1,4 +1,5 @@
 import 'package:responsive_framework/responsive_framework.dart';
+import 'features/splash/presentation/screens/splash_screen.dart';
 import 'main_importants.dart';
 
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       title: "Drivo",
+      home: SplashScreen(),
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.offWhiteColor,
         appBarTheme: const AppBarTheme(

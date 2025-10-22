@@ -9,6 +9,12 @@ class SvgImages
   static const String id = "${svgPath}id.svg";
   static const String location = "${svgPath}location.svg";
   static const String country = "${svgPath}country.svg";
+  static const String home = "${svgPath}home-1-svgrepo-com.svg";
+  static const String booking = "${svgPath}history-time-clock-watch-timer-alarm-schedule-svgrepo-com.svg";
+  static const String contracts = "${svgPath}bill-receipt-svgrepo-com.svg";
+  static const String profile = "${svgPath}profile-about-mobile-ui-svgrepo-com.svg";
+  static const String more = "${svgPath}more-square-svgrepo-com.svg";
+
 
 
 

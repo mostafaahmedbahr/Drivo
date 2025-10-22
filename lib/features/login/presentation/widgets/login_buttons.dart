@@ -1,6 +1,8 @@
 import 'package:drivo/main_importants.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+import '../../../register/presentation/screens/register_screen.dart';
+
 class LoginButtons extends StatelessWidget {
   const LoginButtons({super.key});
 
@@ -16,7 +18,9 @@ class LoginButtons extends StatelessWidget {
                 btnColor: AppColors.orange,
                 borderColor: AppColors.orange,
                 btnText: Text(LocaleKeys.membershipRegister.tr(),
-              style: AppStyles.semiBold14White,), onPressed: (){})),
+              style: AppStyles.semiBold14White,), onPressed: (){
+                  AppNav.customNavigator(context: context, screen: RegisterScreen());
+            })),
             horizontalSpace(20),
             Expanded(child: CustomButton(
                 btnColor: AppColors.whiteColor,

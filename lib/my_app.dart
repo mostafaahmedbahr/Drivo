@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.whiteColor,
         appBarTheme: const AppBarTheme(
           scrolledUnderElevation: 0,
-          backgroundColor: AppColors.offWhiteColor,
+          backgroundColor: AppColors.whiteColor,
         ),
         fontFamily: "Cairo",
         primarySwatch: Colors.blue,

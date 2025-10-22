@@ -8,7 +8,18 @@ class EnLang
     "forgetPassword": "Forgot Password?",
     "login": "Login",
     "membershipRegister": "Register for Membership",
-    "continueAsGuest": "Continue as Guest"
+    "continueAsGuest": "Continue as Guest",
+    "تخطي": "skip",
+    "تأكيد": "confirm",
+    "هاتف": "phone",
+    "التحقق من الهاتف": "phoneValidate",
+    "دولة": "country",
+    "بريد إلكتروني": "email",
+    "موقع": "location",
+    "سعودي": "saudi",
+    "مقيم": "resident",
+    "مجلس التعاون": "cooperationCouncil",
+    "زائر": "visitor"
 
 
 

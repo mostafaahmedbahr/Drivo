@@ -43,6 +43,12 @@ class AppStyles {
     color: AppColors.whiteColor,
   );
 
+  static const TextStyle semiBold14Gray1 = TextStyle(
+    fontSize: fs14,
+    fontWeight: wSemiBold,
+    color: AppColors.greyColor1,
+  );
+
   static const TextStyle semiBold14Orange = TextStyle(
     fontSize: fs14,
     fontWeight: wSemiBold,
@@ -113,6 +119,11 @@ class AppStyles {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle semiBold20White = TextStyle(
+    fontSize: fs20,
+    fontWeight: wSemiBold,
+    color: AppColors.whiteColor,
+  );
   // Bold styles
   static const TextStyle bold24White = TextStyle(
     fontSize: fs24,

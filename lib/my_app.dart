@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'features/splash/presentation/screens/splash_screen.dart';
 import 'main_importants.dart';
@@ -10,16 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale, // This will update automatically
       debugShowCheckedModeBanner: false,
-      title: "Drivo",
+      title: LocaleKeys.appName.tr(),
       home: SplashScreen(),
       theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.offWhiteColor,
+        scaffoldBackgroundColor: AppColors.whiteColor,
         appBarTheme: const AppBarTheme(
           scrolledUnderElevation: 0,
           backgroundColor: AppColors.offWhiteColor,
         ),
-        fontFamily: "Axiforma Regular.otf",
+        fontFamily: "Cairo",
         primarySwatch: Colors.blue,
       ),
       builder: (context, child) => ResponsiveBreakpoints.builder(

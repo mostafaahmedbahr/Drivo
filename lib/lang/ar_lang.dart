@@ -18,16 +18,12 @@ class ArLang {
     "saudi": "سعودي",
     "resident": "مقيم",
     "cooperationCouncil": "مجلس التعاون",
-    "visitor": "زائر"
-
-
-
-
-
-
-
-
-
-
+    "visitor": "زائر",
+    "exit": "خروج",
+    "home": "الرئيسية",
+    "profile": "الملف الشخصي",
+    "more": "المزيد",
+    "myContracts": "عقودي",
+    "myReservations": "حجوزاتي"
   };
 }

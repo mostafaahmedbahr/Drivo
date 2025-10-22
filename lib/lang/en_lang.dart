@@ -1,5 +1,4 @@
-class EnLang
-{
+class EnLang {
   static const Map<String, dynamic> en = {
     "appName": "Drivo",
     "loginMember": "Login as a Member",
@@ -9,31 +8,22 @@ class EnLang
     "login": "Login",
     "membershipRegister": "Register for Membership",
     "continueAsGuest": "Continue as Guest",
-    "تخطي": "skip",
-    "تأكيد": "confirm",
-    "هاتف": "phone",
-    "التحقق من الهاتف": "phoneValidate",
-    "دولة": "country",
-    "بريد إلكتروني": "email",
-    "موقع": "location",
-    "سعودي": "saudi",
-    "مقيم": "resident",
-    "مجلس التعاون": "cooperationCouncil",
-    "زائر": "visitor"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    "skip": "skip",
+    "confirm": "confirm",
+    "phone": "phone",
+    "phoneValidate": "phoneValidate",
+    "country": "country",
+    "email": "email",
+    "location": "location",
+    "saudi": "saudi",
+    "resident": "resident",
+    "cooperationCouncil": "cooperationCouncil",
+    "visitor": "visitor",
+    "exit": "exit",
+    "home": "home",
+    "profile": "profile",
+    "more": "more",
+    "myContracts": "contracts",
+    "myReservations": "booking"
   };
 }

@@ -18,6 +18,12 @@ abstract class LocaleKeys {
   static const resident = "resident";
   static const cooperationCouncil = "cooperationCouncil";
   static const visitor = "visitor";
+  static const exit = "exit";
+  static const home = "home";
+  static const profile = "profile";
+  static const more = "more";
+  static const myContracts = "myContracts";
+  static const myReservations = "myReservations";
 
 
 

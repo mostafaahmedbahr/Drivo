@@ -1,6 +1,7 @@
 import 'package:drivo/main_importants.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+import '../../../layout/presentation/screens/layout_screen.dart';
 import '../../../register/presentation/screens/register_screen.dart';
 
 class LoginButtons extends StatelessWidget {
@@ -10,7 +11,9 @@ class LoginButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomButton(btnText: Text(LocaleKeys.login.tr(),style: AppStyles.semiBold14White,), onPressed: (){}),
+        CustomButton(btnText: Text(LocaleKeys.login.tr(),style: AppStyles.semiBold14White,), onPressed: (){
+          AppNav.customNavigator(context: context, screen: LayoutView());
+        }),
         verticalSpace(24),
         Row(
           children: [

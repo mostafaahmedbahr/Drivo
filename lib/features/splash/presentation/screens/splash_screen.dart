@@ -1,8 +1,5 @@
 import 'dart:math';
-import 'package:drivo/features/splash/presentation/screens/splash_screen_2.dart';
-
-import '../../../../core/utils/app_images/png_images.dart';
-import '../../../../main_importants.dart';
+  import '../../../../main_importants.dart';
 
 class  SplashScreen extends StatefulWidget {
   const  SplashScreen({super.key});
@@ -34,10 +31,8 @@ class _SplashScreenState extends State< SplashScreen>
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-          AppNav.customNavigator(
-            context: context,
-            screen: const SplashScreen2(),
-          );
+
+          context.pushNamed(Routes.splashScreen2);
       }
     });
   }

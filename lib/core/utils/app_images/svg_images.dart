@@ -15,6 +15,10 @@ class SvgImages
   static const String profile = "${svgPath}profile-about-mobile-ui-svgrepo-com.svg";
   static const String more = "${svgPath}more-square-svgrepo-com.svg";
   static const String notify = "${svgPath}notify.svg";
+  static const String door = "${svgPath}car-door-left-1-svgrepo-com.svg";
+  static const String people = "${svgPath}people-svgrepo-com.svg";
+  static const String stick = "${svgPath}gear-shift-stick-svgrepo-com.svg";
+  static const String engine = "${svgPath}car-car-engine-svgrepo-com.svg";
 
 
 

@@ -1,11 +1,13 @@
- import 'package:drivo/core/app_nav/router/routes.dart';
+ import 'package:drivo/features/car_details/presentation/cubit/car_details_cubit.dart';
+import 'package:drivo/features/car_details/presentation/screens/car_details_screen.dart';
 import 'package:drivo/features/home/presentation/screens/home_screen.dart';
 import 'package:drivo/features/layout/presentation/screens/layout_screen.dart';
 import 'package:drivo/features/login/presentation/screens/login_screen.dart';
 import 'package:drivo/features/register/presentation/screens/register_screen.dart';
 import 'package:drivo/features/splash/presentation/screens/splash_screen.dart';
-import 'package:flutter/material.dart';
+ import '../../../features/car_details/presentation/screens/car_gallery_images_screen.dart';
 import '../../../features/splash/presentation/screens/splash_screen_2.dart';
+import '../../../main_importants.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -36,6 +38,20 @@ class AppRouter {
       case Routes.layoutScreen:
         return MaterialPageRoute(
           builder: (context) => const LayoutView(),
+        );
+      case Routes.carImagesGalleryScreen:
+        final args = arguments as Map<String, dynamic>;
+        return MaterialPageRoute(
+          builder: (context) => CarGalleryImagesScreen(
+            carImages: args['carImages'] as List<String>,
+            initialIndex: args['initialIndex'] as int,
+          ),
+        );
+      case Routes.carDetailsScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+              create: (context) => CarDetailsCubit(),
+              child: const CarDetailsScreen()),
         );
 
       default:

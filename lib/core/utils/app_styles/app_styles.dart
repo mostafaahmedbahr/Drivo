@@ -55,6 +55,19 @@ class AppStyles {
     color: AppColors.orange,
   );
 
+  static const TextStyle semiBold14Black = TextStyle(
+    fontSize: fs14,
+    fontWeight: wSemiBold,
+    color: AppColors.blackColor,
+  );
+
+
+  static const TextStyle semiBold18Black = TextStyle(
+    fontSize: fs18,
+    fontWeight: wSemiBold,
+    color: AppColors.blackColor,
+  );
+
   // Light styles
   static const TextStyle light12Gray = TextStyle(
     fontSize: fs12,
@@ -94,6 +107,18 @@ class AppStyles {
     color: AppColors.whiteColor,
   );
 
+  static const TextStyle medium12White = TextStyle(
+    fontSize: fs12,
+    fontWeight: wMedium,
+    color: AppColors.whiteColor,
+  );
+
+  static const TextStyle medium12Black = TextStyle(
+    fontSize: fs12,
+    fontWeight: wMedium,
+    color: AppColors.blackColor,
+  );
+
   static const TextStyle medium16Orange = TextStyle(
     fontSize: fs16,
     fontWeight: wMedium,
@@ -112,6 +137,12 @@ class AppStyles {
     fontWeight: wSemiBold,
     color: AppColors.redColor,
   );
+  static const TextStyle semiBold16Black = TextStyle(
+    fontSize: fs16,
+    fontWeight: wSemiBold,
+    color: AppColors.blackColor,
+  );
+
 
   static const TextStyle semiBold20Black = TextStyle(
     fontSize: fs20,

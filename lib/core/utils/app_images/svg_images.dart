@@ -14,6 +14,7 @@ class SvgImages
   static const String contracts = "${svgPath}bill-receipt-svgrepo-com.svg";
   static const String profile = "${svgPath}profile-about-mobile-ui-svgrepo-com.svg";
   static const String more = "${svgPath}more-square-svgrepo-com.svg";
+  static const String notify = "${svgPath}notify.svg";
 
 
 

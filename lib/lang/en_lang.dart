@@ -24,6 +24,11 @@ class EnLang {
     "profile": "profile",
     "more": "more",
     "myContracts": "contracts",
-    "myReservations": "booking"
+    "myReservations": "booking",
+    "reservation": "Reservation",
+    "offers": "Offers",
+    "chooseYourCarNow": "Choose Your Car Now",
+    "dateOfReceipt": "Date of Receipt",
+    "timeOfReceipt": "Time of Receipt"
   };
 }

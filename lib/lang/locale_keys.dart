@@ -24,6 +24,11 @@ abstract class LocaleKeys {
   static const more = "more";
   static const myContracts = "myContracts";
   static const myReservations = "myReservations";
+  static const reservation = "reservation";
+  static const offers = "offers";
+  static const chooseYourCarNow = "chooseYourCarNow";
+  static const dateOfReceipt = "dateOfReceipt";
+  static const timeOfReceipt = "timeOfReceipt";
 
 
 

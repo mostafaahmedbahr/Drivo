@@ -24,6 +24,11 @@ class ArLang {
     "profile": "الملف الشخصي",
     "more": "المزيد",
     "myContracts": "عقودي",
-    "myReservations": "حجوزاتي"
+    "myReservations": "حجوزاتي",
+    "reservation": "حجز",
+    "offers": "العروض",
+    "chooseYourCarNow": "اختر سيارتك الآن",
+    "dateOfReceipt": "تاريخ الاستلام",
+    "timeOfReceipt": "وقت الاستلام"
   };
 }

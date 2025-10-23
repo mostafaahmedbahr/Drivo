@@ -1,7 +1,5 @@
 import 'dart:async';
-import 'package:drivo/core/utils/app_images/png_images.dart';
-import 'package:drivo/features/login/presentation/screens/login_screen.dart';
-import 'package:drivo/main_importants.dart';
+  import 'package:drivo/main_importants.dart';
 
 class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({super.key});
@@ -17,7 +15,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
     // تأخير لمدة 3 ثواني ثم الانتقال للشاشة التالية
     Future.delayed(const Duration(seconds: 2), () {
       if(mounted){
-        AppNav.customNavigator(context: context, screen: LoginScreen());
+        context.pushNamed(Routes.loginScreen);
       }
     });
   }

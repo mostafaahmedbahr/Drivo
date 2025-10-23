@@ -3,7 +3,7 @@
  import 'package:easy_localization/easy_localization.dart';
 
 import 'core/utils/app_services/remote_services/service_locator.dart';
-import 'core/utils/bloc_observer.dart';
+import 'core/utils/helpers/bloc_observer.dart';
 import 'lang/codegen_loader.g.dart';
 import 'main_importants.dart';
 import 'my_app.dart';

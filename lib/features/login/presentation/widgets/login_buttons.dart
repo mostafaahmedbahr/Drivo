@@ -1,6 +1,8 @@
+import 'package:drivo/core/app_nav/nav_extensions.dart';
 import 'package:drivo/main_importants.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+import '../../../../core/app_nav/router/routes.dart';
 import '../../../layout/presentation/screens/layout_screen.dart';
 import '../../../register/presentation/screens/register_screen.dart';
 
@@ -12,7 +14,7 @@ class LoginButtons extends StatelessWidget {
     return Column(
       children: [
         CustomButton(btnText: Text(LocaleKeys.login.tr(),style: AppStyles.semiBold14White,), onPressed: (){
-          AppNav.customNavigator(context: context, screen: LayoutView());
+          context.pushNamed(Routes.layoutScreen);
         }),
         verticalSpace(24),
         Row(
@@ -22,7 +24,7 @@ class LoginButtons extends StatelessWidget {
                 borderColor: AppColors.orange,
                 btnText: Text(LocaleKeys.membershipRegister.tr(),
               style: AppStyles.semiBold14White,), onPressed: (){
-                  AppNav.customNavigator(context: context, screen: RegisterScreen());
+              context.pushNamed(Routes.registerScreen);
             })),
             horizontalSpace(20),
             Expanded(child: CustomButton(

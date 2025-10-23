@@ -29,6 +29,20 @@ abstract class LocaleKeys {
   static const chooseYourCarNow = "chooseYourCarNow";
   static const dateOfReceipt = "dateOfReceipt";
   static const timeOfReceipt = "timeOfReceipt";
+  static const carDetails = "carDetails";
+  static const carFeatures = "carFeatures";
+  static const fuelType = "fuelType";
+  static const passengers = "passengers";
+  static const transmission = "transmission";
+  static const doors = "doors";
+  static const expertEvaluation = "expertEvaluation";
+  static const expertEvaluationRange = "expertEvaluationRange";
+  static const consumption = "consumption";
+  static const comfort = "comfort";
+  static const safety = "safety";
+
+
+  static const rent = "rent";
 
 
 

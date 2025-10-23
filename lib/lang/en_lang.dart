@@ -29,6 +29,17 @@ class EnLang {
     "offers": "Offers",
     "chooseYourCarNow": "Choose Your Car Now",
     "dateOfReceipt": "Date of Receipt",
-    "timeOfReceipt": "Time of Receipt"
+    "timeOfReceipt": "Time of Receipt",
+    "fuelType": "Fuel Type",
+    "passengers": "Passengers",
+    "transmission": "Transmission",
+    "doors": "Doors",
+    "expertEvaluationRange": "Rating on a scale of 1 to 5",
+    "carDetails": "Car Details",
+    "carFeatures": "Car Features",
+    "expertEvaluation": "Expert Evaluation",
+    "consumption": "Consumption",
+    "comfort": "Comfort",
+    "safety": "Safety"
   };
 }

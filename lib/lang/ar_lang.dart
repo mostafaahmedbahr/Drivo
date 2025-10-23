@@ -29,6 +29,17 @@ class ArLang {
     "offers": "العروض",
     "chooseYourCarNow": "اختر سيارتك الآن",
     "dateOfReceipt": "تاريخ الاستلام",
-    "timeOfReceipt": "وقت الاستلام"
+    "timeOfReceipt": "وقت الاستلام",
+    "fuelType": "نوع الوقود",
+    "passengers": "عدد الركاب",
+    "transmission": "ناقل الحركة",
+    "doors": "عدد الأبواب",
+    "expertEvaluationRange" : "التصنيف على مقياس من 1 إلى 5",
+    "carDetails": "تفاصيل السيارة",
+    "carFeatures": "مواصفات السيارة",
+    "expertEvaluation": "تقييم الخبراء",
+    "consumption": "الاستهلاك",
+    "comfort": "الراحة",
+    "safety": "السلامة"
   };
 }

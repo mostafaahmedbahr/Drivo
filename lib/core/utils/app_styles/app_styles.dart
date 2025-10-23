@@ -113,11 +113,23 @@ class AppStyles {
     color: AppColors.whiteColor,
   );
 
+  static const TextStyle medium12Gray = TextStyle(
+    fontSize: fs12,
+    fontWeight: wMedium,
+    color: AppColors.greyColor,
+  );
+
   static const TextStyle medium12Black = TextStyle(
     fontSize: fs12,
     fontWeight: wMedium,
     color: AppColors.blackColor,
   );
+  static const TextStyle medium16Black = TextStyle(
+    fontSize: fs16,
+    fontWeight: wMedium,
+    color: AppColors.blackColor,
+  );
+
 
   static const TextStyle medium16Orange = TextStyle(
     fontSize: fs16,
@@ -143,6 +155,12 @@ class AppStyles {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle semiBold16White = TextStyle(
+    fontSize: fs16,
+    fontWeight: wSemiBold,
+    color: AppColors.whiteColor,
+  );
+
 
   static const TextStyle semiBold20Black = TextStyle(
     fontSize: fs20,
@@ -162,6 +180,12 @@ class AppStyles {
     color: AppColors.whiteColor,
   );
 
+  static const TextStyle bold24Black = TextStyle(
+    fontSize: fs24,
+    fontWeight: wBold,
+    color: AppColors.blackColor,
+  );
+
   static const TextStyle bold32BlackCurrant = TextStyle(
     fontSize: fs32,
     fontWeight: wBold,
@@ -169,6 +193,13 @@ class AppStyles {
   );
 
   // Extra Bold styles
+
+  static const TextStyle yellow16Bold = TextStyle(
+    fontSize: fs16,
+    fontWeight: wExtraBold,
+    color: AppColors.yellowColor,
+  );
+
   static const TextStyle extraBold40Yellow = TextStyle(
     fontSize: fs40,
     fontWeight: wExtraBold,

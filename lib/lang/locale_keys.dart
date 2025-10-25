@@ -43,6 +43,9 @@ abstract class LocaleKeys {
 
 
   static const rent = "rent";
+  static const next = "next";
+  static const whatIsYourChoice = "whatIsYourChoice";
+  static const search = "search";
 
 
 

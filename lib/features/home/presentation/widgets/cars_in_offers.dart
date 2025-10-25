@@ -25,7 +25,7 @@ class CarsInOffers extends StatelessWidget {
           ),
           itemCount: 10,
           itemBuilder: (context, index) {
-            return const CarItem();
+            return const CarItem(fullWidth: false,);
           },
         ),
       ],

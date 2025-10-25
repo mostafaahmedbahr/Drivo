@@ -1,4 +1,5 @@
- import 'package:drivo/features/car_details/presentation/cubit/car_details_cubit.dart';
+ import 'package:drivo/features/all_cars/presentation/screens/all_cars_screen.dart';
+import 'package:drivo/features/car_details/presentation/cubit/car_details_cubit.dart';
 import 'package:drivo/features/car_details/presentation/screens/car_details_screen.dart';
 import 'package:drivo/features/home/presentation/screens/home_screen.dart';
 import 'package:drivo/features/layout/presentation/screens/layout_screen.dart';
@@ -53,7 +54,10 @@ class AppRouter {
               create: (context) => CarDetailsCubit(),
               child: const CarDetailsScreen()),
         );
-
+      case Routes.allCarsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const AllCarsScreen(),
+        );
       default:
         return null;
     }

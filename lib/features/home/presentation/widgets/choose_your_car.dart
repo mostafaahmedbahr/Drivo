@@ -109,6 +109,16 @@ class _ChooseYourCarState extends State<ChooseYourCar> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: CustomButton(
+              btnText:
+              Text(LocaleKeys.next.tr(),style: AppStyles.semiBold16White,),
+              onPressed: (){
+                context.pushNamed(Routes.allCarsScreen);
+              },
+          ),
+        ),
       ],
     );
   }

@@ -68,6 +68,12 @@ class AppStyles {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle semiBold18White = TextStyle(
+    fontSize: fs18,
+    fontWeight: wSemiBold,
+    color: AppColors.whiteColor,
+  );
+
   // Light styles
   static const TextStyle light12Gray = TextStyle(
     fontSize: fs12,

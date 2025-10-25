@@ -19,6 +19,8 @@ class SvgImages
   static const String people = "${svgPath}people-svgrepo-com.svg";
   static const String stick = "${svgPath}gear-shift-stick-svgrepo-com.svg";
   static const String engine = "${svgPath}car-car-engine-svgrepo-com.svg";
+  static const String search = "${svgPath}search-normal.svg";
+
 
 
 

@@ -2,7 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import '../../../../main_importants.dart';
 
 class CarItem extends StatelessWidget {
-  const CarItem({super.key});
+  const CarItem({super.key, required this.fullWidth});
+  final bool fullWidth;
   @override
   Widget build(BuildContext context) {
     final bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
@@ -31,6 +32,7 @@ class CarItem extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 6),
+            fullWidth ? Image.asset("assets/images/pngs/LEAD-removebg-preview.png",fit: BoxFit.cover,height: 140,):
             Expanded(
               child: Image.asset("assets/images/pngs/LEAD-removebg-preview.png",fit: BoxFit.cover,),
             ),

@@ -40,12 +40,14 @@ abstract class LocaleKeys {
   static const consumption = "consumption";
   static const comfort = "comfort";
   static const safety = "safety";
-
-
   static const rent = "rent";
   static const next = "next";
   static const whatIsYourChoice = "whatIsYourChoice";
   static const search = "search";
+  static const all = "all";
+  static const current = "current";
+  static const completed = "completed";
+  static const cancelled = "cancelled";
 
 
 

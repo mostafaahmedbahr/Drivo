@@ -40,6 +40,14 @@ class ArLang {
     "expertEvaluation": "تقييم الخبراء",
     "consumption": "الاستهلاك",
     "comfort": "الراحة",
-    "safety": "السلامة"
+    "safety": "السلامة",
+    "rent": "تأجير",
+    "next": "التالي",
+    "whatIsYourChoice": "ما هو اختيارك؟",
+    "search": "بحث",
+    "all": "الكل",
+    "current": "جارية",
+    "completed": "مكتملة",
+    "cancelled": "ملغية"
   };
 }

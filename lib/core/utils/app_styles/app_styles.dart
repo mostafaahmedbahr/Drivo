@@ -218,6 +218,13 @@ class AppStyles {
     color: AppColors.shipGray,
   );
 
+  static const TextStyle extraBold16ShipGray = TextStyle(
+    fontSize: fs16,
+    fontWeight: wExtraBold,
+    color: AppColors.shipGray,
+  );
+
+
   // Black styles (ultra bold)
   static const TextStyle black60Orange = TextStyle(
     fontSize: fs60,

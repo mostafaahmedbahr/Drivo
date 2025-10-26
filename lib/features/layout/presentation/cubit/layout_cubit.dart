@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/services.dart';
 
 import '../../../../main_importants.dart';
+import '../../../booking/presentation/screens/booking_screen.dart';
 import '../../../home/presentation/screens/home_screen.dart';
 import 'layout_states.dart';
 
@@ -18,7 +19,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
     Text("1"),
     Text("2"),
     HomeScreen(),
-    Text("4"),
+    BookingScreen(),
     Text("5"),
 
   ];

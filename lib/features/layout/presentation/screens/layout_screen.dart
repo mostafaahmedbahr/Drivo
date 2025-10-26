@@ -1,4 +1,5 @@
 import '../../../../main_importants.dart';
+import '../widgets/profile_name_and_notification_icon.dart';
 import '../cubit/layout_cubit.dart';
 import '../cubit/layout_states.dart';
 import '../widgets/bottom_navigation_bar_widget.dart';
@@ -16,6 +17,11 @@ class LayoutView extends StatelessWidget {
             layoutCubit.onPopInvoked(didPop, context);
           },
           child: Scaffold(
+            appBar: AppBar(
+              automaticallyImplyLeading: false,
+              elevation: 0,
+              title: const ProfileNameAndNotificationIcon(),
+            ),
             body: layoutCubit.screens[LayoutCubit.pageIndex],
             bottomNavigationBar: const BottomNavigationBarWidget(),
           ),

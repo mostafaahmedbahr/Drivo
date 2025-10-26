@@ -40,6 +40,14 @@ class EnLang {
     "expertEvaluation": "Expert Evaluation",
     "consumption": "Consumption",
     "comfort": "Comfort",
-    "safety": "Safety"
+    "safety": "Safety",
+    "rent": "Rent",
+    "next": "Next",
+    "whatIsYourChoice": "What is your choice?",
+    "search": "Search",
+    "all": "All",
+    "current": "Current",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
   };
 }

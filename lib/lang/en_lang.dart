@@ -48,6 +48,12 @@ class EnLang {
     "all": "All",
     "current": "Current",
     "completed": "Completed",
-    "cancelled": "Cancelled"
+    "cancelled": "Cancelled",
+    "taller": "Fleet",
+    "branches": "Branches",
+    "support": "Support",
+    "aboutDrivo": "About Drivo",
+    "contactUs": "Contact Us",
+    "settings": "Settings"
   };
 }

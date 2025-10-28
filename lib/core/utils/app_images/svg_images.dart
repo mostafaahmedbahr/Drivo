@@ -20,6 +20,13 @@ class SvgImages
   static const String stick = "${svgPath}gear-shift-stick-svgrepo-com.svg";
   static const String engine = "${svgPath}car-car-engine-svgrepo-com.svg";
   static const String search = "${svgPath}search-normal.svg";
+  static const String arrow = "${svgPath}arrow.svg";
+  static const String taller = "${svgPath}two-men-standing-svgrepo-com.svg";
+  static const String branches = "${svgPath}share.svg";
+  static const String support = "${svgPath}support.svg";
+  static const String drivo = "${svgPath}drivo.svg";
+  static const String mobile = "${svgPath}mobile.svg";
+  static const String settings = "${svgPath}settings-svgrepo-com.svg";
 
 
 

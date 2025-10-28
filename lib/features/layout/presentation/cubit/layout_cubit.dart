@@ -6,6 +6,7 @@ import '../../../booking/presentation/screens/booking_screen.dart';
 import '../../../contracts/presentation/screens/contracts_screen.dart';
 import '../../../home/presentation/screens/home_screen.dart';
 import '../../../more/presentation/screens/more_screen.dart';
+import '../../../profile/presentation/screens/profile_screen.dart';
 import 'layout_states.dart';
 
 
@@ -22,7 +23,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
     ContractsScreen(),
     HomeScreen(),
     BookingScreen(),
-    Text("5"),
+    ProfileScreen(),
 
   ];
 

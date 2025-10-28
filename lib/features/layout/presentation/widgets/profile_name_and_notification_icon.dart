@@ -32,7 +32,11 @@ class ProfileNameAndNotificationIcon extends StatelessWidget {
             ),
           ],
         ),
-        SvgPicture.asset(SvgImages.notify,colorFilter: ColorFilter.mode(AppColors.orange, BlendMode.srcIn),),
+        InkWell(
+            onTap: (){
+              context.pushNamed(Routes.notificationsScreen);
+            },
+            child: SvgPicture.asset(SvgImages.notify,colorFilter: ColorFilter.mode(AppColors.orange, BlendMode.srcIn),)),
       ],
     );
   }

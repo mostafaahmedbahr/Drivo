@@ -14,7 +14,7 @@ platform :android do
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk",
         testers: "mustafa.bahr12323@gmail.com",
-        release_notes: "",
+        release_notes: "test the ui part 1",
   )
   end
 end

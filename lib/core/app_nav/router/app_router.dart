@@ -10,6 +10,7 @@ import 'package:drivo/features/splash/presentation/screens/splash_screen.dart';
 import '../../../features/car_details/presentation/screens/car_gallery_images_screen.dart';
 import '../../../features/contracts/presentation/screens/contracts_screen.dart';
 import '../../../features/more/presentation/screens/more_screen.dart';
+import '../../../features/notifications/presentation/screens/notifications_screen.dart';
 import '../../../features/profile/presentation/screens/profile_screen.dart';
 import '../../../features/splash/presentation/screens/splash_screen_2.dart';
 import '../../../main_importants.dart';
@@ -77,6 +78,10 @@ class AppRouter {
       case Routes.bookingScreen:
         return MaterialPageRoute(
           builder: (context) => const BookingScreen(),
+        );
+      case Routes.notificationsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const NotificationsScreen(),
         );
       default:
         return null;

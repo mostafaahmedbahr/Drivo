@@ -60,6 +60,7 @@ abstract class LocaleKeys {
   static const totalPrice = "totalPrice";
   static const details = "details";
   static const download = "download";
+  static const notifications = "notifications";
 
 
 

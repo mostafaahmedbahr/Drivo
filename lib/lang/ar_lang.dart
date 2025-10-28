@@ -48,6 +48,13 @@ class ArLang {
     "all": "الكل",
     "current": "جارية",
     "completed": "مكتملة",
-    "cancelled": "ملغية"
+    "cancelled": "ملغية",
+    "taller": "الاسطول",
+    "branches": "الفروع",
+    "support": "الدعم",
+    "aboutDrivo": "عن درايفو",
+    "contactUs": "اتصل بنا",
+    "settings": "الإعدادات"
+
   };
 }

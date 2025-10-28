@@ -48,6 +48,12 @@ abstract class LocaleKeys {
   static const current = "current";
   static const completed = "completed";
   static const cancelled = "cancelled";
+  static const taller = "taller";
+  static const branches = "branches";
+  static const support = "support";
+  static const aboutDrivo = "aboutDrivo";
+  static const contactUs = "contactUs";
+  static const settings = "settings";
 
 
 

@@ -17,6 +17,8 @@ export 'core/app_nav/router/app_router.dart';
 export 'package:drivo/core/app_nav/router/routes.dart';
 export 'package:drivo/core/app_nav/nav_extensions.dart';
 export 'package:drivo/core/utils/app_images/png_images.dart';
+export 'package:drivo/core/shared_widgets/container_search_widget.dart';
+
 
 
 

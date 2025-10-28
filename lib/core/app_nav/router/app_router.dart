@@ -1,14 +1,13 @@
  import 'package:drivo/features/all_cars/presentation/screens/all_cars_screen.dart';
-import 'package:drivo/features/booking/presentation/cubit/booking_cubit.dart';
-import 'package:drivo/features/booking/presentation/screens/booking_screen.dart';
-import 'package:drivo/features/car_details/presentation/cubit/car_details_cubit.dart';
+  import 'package:drivo/features/car_details/presentation/cubit/car_details_cubit.dart';
 import 'package:drivo/features/car_details/presentation/screens/car_details_screen.dart';
-import 'package:drivo/features/home/presentation/screens/home_screen.dart';
+ import 'package:drivo/features/home/presentation/screens/home_screen.dart';
 import 'package:drivo/features/layout/presentation/screens/layout_screen.dart';
 import 'package:drivo/features/login/presentation/screens/login_screen.dart';
 import 'package:drivo/features/register/presentation/screens/register_screen.dart';
 import 'package:drivo/features/splash/presentation/screens/splash_screen.dart';
  import '../../../features/car_details/presentation/screens/car_gallery_images_screen.dart';
+import '../../../features/contracts/presentation/screens/contracts_screen.dart';
 import '../../../features/more/presentation/screens/more_screen.dart';
 import '../../../features/splash/presentation/screens/splash_screen_2.dart';
 import '../../../main_importants.dart';
@@ -64,6 +63,10 @@ class AppRouter {
       case Routes.moreScreen:
         return MaterialPageRoute(
           builder: (context) => const MoreScreen(),
+        );
+      case Routes.contractsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ContractsScreen(),
         );
       default:
         return null;

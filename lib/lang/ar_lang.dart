@@ -54,7 +54,13 @@ class ArLang {
     "support": "الدعم",
     "aboutDrivo": "عن درايفو",
     "contactUs": "اتصل بنا",
-    "settings": "الإعدادات"
+    "settings": "الإعدادات",
+    "closed": "مغلق",
+    "underClaim": "قيد المطالبة",
+    "active": "نشط",
+    "totalPrice": "السعر الإجمالي",
+    "details": "التفاصيل",
+    "download": "تحميل"
 
   };
 }

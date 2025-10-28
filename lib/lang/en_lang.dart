@@ -54,6 +54,12 @@ class EnLang {
     "support": "Support",
     "aboutDrivo": "About Drivo",
     "contactUs": "Contact Us",
-    "settings": "Settings"
+    "settings": "Settings",
+    "closed": "Closed",
+    "underClaim": "Under Claim",
+    "active": "Active",
+    "totalPrice": "Total Price",
+    "details": "Details",
+    "download": "Download"
   };
 }

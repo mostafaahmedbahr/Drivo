@@ -54,6 +54,13 @@ abstract class LocaleKeys {
   static const aboutDrivo = "aboutDrivo";
   static const contactUs = "contactUs";
   static const settings = "settings";
+  static const closed = "closed";
+  static const underClaim = "underClaim";
+  static const active = "active";
+  static const totalPrice = "totalPrice";
+  static const details = "details";
+  static const download = "download";
+
 
 
 

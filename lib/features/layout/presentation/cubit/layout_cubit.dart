@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../../main_importants.dart';
 import '../../../booking/presentation/screens/booking_screen.dart';
+import '../../../contracts/presentation/screens/contracts_screen.dart';
 import '../../../home/presentation/screens/home_screen.dart';
 import '../../../more/presentation/screens/more_screen.dart';
 import 'layout_states.dart';
@@ -18,7 +19,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
 
   List screens = [
     MoreScreen(),
-    Text("2"),
+    ContractsScreen(),
     HomeScreen(),
     BookingScreen(),
     Text("5"),

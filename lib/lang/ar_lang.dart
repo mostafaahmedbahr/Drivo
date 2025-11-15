@@ -66,6 +66,13 @@ class ArLang {
     "choosePickupLocation": "اختر مكان الاستلام",
     "deliveryToAnotherLocation": "التسليم ف مكان اخر",
     'bestCars' : "افضل السيارات",
+    "viewAll": "عرض الكل",
+    "language": "اللغة",
+    "selectLanguage": "اختر اللغة",
+    "changeLanguage": "تغيير اللغة",
+    "languageChangedTo": "تم تغيير اللغة إلى العربية",
+    "soon": "قريباً",
+    "cancel": "إلغاء"
 
   };
 }

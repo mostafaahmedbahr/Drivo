@@ -66,5 +66,12 @@ class EnLang {
     "choosePickupLocation": "Choose Pickup Location",
     "deliveryToAnotherLocation": "Delivery to another location",
     "bestCars" : "Best Cars",
+    "viewAll": "View All",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "changeLanguage": "Change Language",
+    "languageChangedTo": "Language changed to English",
+    "soon": "Soon",
+    "cancel": "Cancel"
   };
 }

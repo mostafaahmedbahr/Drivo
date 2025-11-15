@@ -68,6 +68,12 @@ abstract class LocaleKeys {
   static const bestCars = "bestCars";
 
 
+  static const language = "language";
+  static const selectLanguage = "selectLanguage";
+  static const changeLanguage = "changeLanguage";
+  static const languageChangedTo = "languageChangedTo";
+
+
 
 
 

@@ -27,6 +27,7 @@ class SvgImages
   static const String drivo = "${svgPath}drivo.svg";
   static const String mobile = "${svgPath}mobile.svg";
   static const String settings = "${svgPath}settings-svgrepo-com.svg";
+  static const String language = "${svgPath}language-translate-svgrepo-com.svg";
 
 
 

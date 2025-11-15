@@ -1,38 +1,32 @@
-import 'dart:math';
-  import '../../../../main_importants.dart';
+import '../../../../main_importants.dart';
 
-class  SplashScreen extends StatefulWidget {
-  const  SplashScreen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State< SplashScreen> createState() => _SplashScreenState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _SplashScreenState extends State< SplashScreen>
+class SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _rotationAnimation;
-  late Animation<double> _scaleAnimation;
+  late Animation<double> _animation;
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 4),
       vsync: this,
     );
 
-    _rotationAnimation = Tween(begin: 0.0, end: 2 * pi).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
-    _scaleAnimation = Tween(begin: 0.0, end: 1.0).animate(_controller);
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
 
     _controller.forward();
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-
-          context.pushNamed(Routes.splashScreen2);
+        context.pushNamed(Routes.splashScreen2);
       }
     });
   }
@@ -45,21 +39,16 @@ class _SplashScreenState extends State< SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    debugPrint(CacheTokenManger.userToken);
+    debugPrint("SplashScreen");
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: AnimatedBuilder(
-        animation: _controller,
-        builder: (context, child) {
-          return Transform.rotate(
-            angle: _rotationAnimation.value,
-            child: Transform.scale(
-              scale: _scaleAnimation.value,
-              child: Center(
-                child: Image.asset(PngImages.logo, width: 200),
-              ),
-            ),
-          );
-        },
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: ScaleTransition(
+          scale: _animation,
+          child: Center(child: Image.asset(PngImages.logo,width: 200,)),
+        ),
       ),
     );
   }

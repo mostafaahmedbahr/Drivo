@@ -2,7 +2,7 @@ import 'package:drivo/main_importants.dart';
 
 import '../widgets/cars_in_offers.dart';
 import '../widgets/choose_your_car.dart';
-import '../../../layout/presentation/widgets/profile_name_and_notification_icon.dart';
+import '../widgets/offer_slider_images.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +15,8 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           children: [
             ChooseYourCar(),
-            CarsInOffers(),
+         OfferSliderImages(),
+         //   CarsInOffers(),
           ],
         ),
       )),

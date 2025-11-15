@@ -6,7 +6,7 @@ class EnLang {
     "passcode": "Passcode",
     "forgetPassword": "Forgot Password?",
     "login": "Login",
-    "membershipRegister": "Register for Membership",
+    "membershipRegister": "Register",
     "continueAsGuest": "Continue as Guest",
     "skip": "skip",
     "confirm": "confirm",

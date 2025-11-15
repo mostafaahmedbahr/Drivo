@@ -9,7 +9,7 @@ class CustomButton extends StatelessWidget {
   final Color? borderColor;
   final double? radius;
   final Widget btnText;
-  final void Function() onPressed;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {

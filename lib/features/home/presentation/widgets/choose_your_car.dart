@@ -151,56 +151,7 @@ class ChooseYourCar extends StatelessWidget {
                 ],
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 12),
-            //   child: Row(
-            //     children: [
-            //       Expanded(
-            //         child: CustomTextFormField(
-            //           hintText: LocaleKeys.dateOfReceipt.tr(),
-            //           onPressed: () async {
-            //             // 1️⃣ المستخدم يختار التاريخ
-            //             final selectedDate = await DateTimePickerHelper.selectDate(context);
-            //             if (selectedDate != null) {
-            //               print("📅 التاريخ المختار: $selectedDate");
-            //
-            //               // 2️⃣ بعد اختيار التاريخ مباشرة، نفتح اختيار الوقت
-            //               final selectedTime = await DateTimePickerHelper.selectTime(context);
-            //               if (selectedTime != null) {
-            //                 print("⏰ الوقت المختار: ${selectedTime.format(context)}");
-            //
-            //                 // 3️⃣ لو عايز تجمع التاريخ والوقت معًا في DateTime
-            //                 final combinedDateTime = DateTime(
-            //                   selectedDate.year,
-            //                   selectedDate.month,
-            //                   selectedDate.day,
-            //                   selectedTime.hour,
-            //                   selectedTime.minute,
-            //                 );
-            //
-            //                 print("📆 التاريخ والوقت الكامل: $combinedDateTime");
-            //
-            //                 // هنا تقدر تحفظ القيمة أو تحدث state
-            //                 // setState(() { _selectedDateTime = combinedDateTime; });
-            //               }
-            //             }
-            //           },
-            //         ),
-            //       ),
-            //       horizontalSpace(12),
-            //       Expanded(child: CustomTextFormField(
-            //         onPressed: () async {
-            //           final selectedTime = await DateTimePickerHelper.selectTime(context);
-            //           if (selectedTime != null) {
-            //             print("📅 الوقت المختار: $selectedTime");
-            //             // تقدر تحدث الـ state هنا أو تحفظ القيمة
-            //           }
-            //         },
-            //         hintText: LocaleKeys.timeOfReceipt.tr(),
-            //       )),
-            //     ],
-            //   ),
-            // ),
+       
 
           ],
         );

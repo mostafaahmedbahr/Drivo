@@ -5,6 +5,7 @@ class ProfileNameAndNotificationIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -24,7 +25,7 @@ class ProfileNameAndNotificationIcon extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
-                    "Hi, Mostafa Bahr",
+                    isArabic ? "اهلا مصطفي بحر":   "Hi, Mostafa Bahr",
                     style: AppStyles.semiBold16Black,
                   ),
                 ),

@@ -26,12 +26,12 @@ class CarItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Hyundai", style: AppStyles.semiBold14Black),
-                  Text("Sonata", style: AppStyles.semiBold14Black),
+                  Text("هيونداي", style: AppStyles.semiBold14Black),
+                  Text("سوناتا", style: AppStyles.semiBold14Black),
                 ],
               ),
             ),
-            const SizedBox(height: 6),
+            verticalSpace(6),
             fullWidth ? Image.asset("assets/images/pngs/LEAD-removebg-preview.png",fit: BoxFit.cover,height: 140,):
             Expanded(
               child: Image.asset("assets/images/pngs/LEAD-removebg-preview.png",fit: BoxFit.cover,),
@@ -64,9 +64,9 @@ class CarItem extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
+                  padding: const EdgeInsetsGeometry.directional(end:  8.0),
                   child: Text(
-                    "80 rs/day",
+                    "80 ريال/يوم",
                     style: AppStyles.medium12Black,
                   ),
                 ),

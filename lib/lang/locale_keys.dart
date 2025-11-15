@@ -66,6 +66,7 @@ abstract class LocaleKeys {
   static const choosePickupLocation = "choosePickupLocation";
   static const deliveryToAnotherLocation = "deliveryToAnotherLocation";
   static const bestCars = "bestCars";
+  static const viewAll = "viewAll";
 
 
 

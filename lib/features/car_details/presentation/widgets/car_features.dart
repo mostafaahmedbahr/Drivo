@@ -7,6 +7,7 @@ class CarFeatures extends StatelessWidget {
   const CarFeatures({super.key});
   @override
   Widget build(BuildContext context) {
+    final bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
     var carDetailsCubit = context.read<CarDetailsCubit>();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,7 +24,8 @@ class CarFeatures extends StatelessWidget {
                 (index) => Expanded(
               child: Padding(
                 padding: EdgeInsets.only(
-                  right: index < carDetailsCubit.featuresList.length - 1 ? 12 : 0,
+                  left: isArabic? index < carDetailsCubit.featuresList.length - 1 ? 12 : 0 : 0,
+                  right:!isArabic? index < carDetailsCubit.featuresList.length - 1 ? 12 : 0 : 0,
                 ),
                 child: CarFeatureItem(
                   svgImage: carDetailsCubit.featuresList[index].svgImage,

@@ -66,13 +66,14 @@ abstract class LocaleKeys {
   static const choosePickupLocation = "choosePickupLocation";
   static const deliveryToAnotherLocation = "deliveryToAnotherLocation";
   static const bestCars = "bestCars";
+
   static const viewAll = "viewAll";
-
-
   static const language = "language";
   static const selectLanguage = "selectLanguage";
   static const changeLanguage = "changeLanguage";
   static const languageChangedTo = "languageChangedTo";
+  static const soon = "soon";
+  static const cancel = "cancel";
 
 
 

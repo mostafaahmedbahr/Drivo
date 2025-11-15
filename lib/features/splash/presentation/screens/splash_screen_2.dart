@@ -1,14 +1,14 @@
 import 'dart:async';
   import 'package:drivo/main_importants.dart';
 
-class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplashScreen2> createState() => _SplashScreen2State();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreen2State extends State<SplashScreen2> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();

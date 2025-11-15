@@ -2,8 +2,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'car_item.dart';
 
-class CarsInOffers extends StatelessWidget {
-  const CarsInOffers({super.key});
+class BestCars extends StatelessWidget {
+  const BestCars({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class CarsInOffers extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(12.0),
-          child: Text(LocaleKeys.offers.tr(),style: AppStyles.semiBold18Black,),
+          child: Text(LocaleKeys.bestCars.tr(),style: AppStyles.semiBold18Black,),
         ),
         GridView.builder(
           shrinkWrap: true,

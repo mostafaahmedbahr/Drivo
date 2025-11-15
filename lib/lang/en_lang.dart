@@ -60,6 +60,11 @@ class EnLang {
     "active": "Active",
     "totalPrice": "Total Price",
     "details": "Details",
-    "download": "Download"
+    "download": "Download",
+    "city": "City",
+    "branch": "Branch",
+    "choosePickupLocation": "Choose Pickup Location",
+    "deliveryToAnotherLocation": "Delivery to another location",
+    "bestCars" : "Best Cars",
   };
 }

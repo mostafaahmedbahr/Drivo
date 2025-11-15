@@ -21,7 +21,7 @@ class ArLang {
     "visitor": "زائر",
     "exit": "خروج",
     "home": "الرئيسية",
-    "profile": "الملف الشخصي",
+    "profile": "البروفايل",
     "more": "المزيد",
     "myContracts": "عقودي",
     "myReservations": "حجوزاتي",
@@ -60,7 +60,12 @@ class ArLang {
     "active": "نشط",
     "totalPrice": "السعر الإجمالي",
     "details": "التفاصيل",
-    "download": "تحميل"
+    "download": "تحميل",
+    "city": "المدينة",
+    "branch": "الفرع",
+    "choosePickupLocation": "اختر مكان الاستلام",
+    "deliveryToAnotherLocation": "التسليم ف مكان اخر",
+    'bestCars' : "افضل السيارات",
 
   };
 }

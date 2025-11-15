@@ -1,4 +1,5 @@
- import 'package:easy_localization/easy_localization.dart';
+ import 'package:drivo/features/home/presentation/cubit/home_cubit.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'features/layout/presentation/cubit/layout_cubit.dart';
  import 'main_importants.dart';
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => LayoutCubit()),
+        BlocProvider(create: (context) => HomeCubit()),
       ],
       child: MaterialApp(
         onGenerateRoute: AppRouter().generateRoute,

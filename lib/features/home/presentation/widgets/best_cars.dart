@@ -11,8 +11,18 @@ class BestCars extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Text(LocaleKeys.bestCars.tr(),style: AppStyles.semiBold18Black,),
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(LocaleKeys.bestCars.tr(),style: AppStyles.semiBold18Black,),
+              TextButton(onPressed: (){
+                context.pushNamed(Routes.allCarsScreen);
+              }, child: Text(LocaleKeys.viewAll.tr(),style: TextStyle(
+                color: AppColors.orange
+              ),))
+            ],
+          ),
         ),
         GridView.builder(
           shrinkWrap: true,

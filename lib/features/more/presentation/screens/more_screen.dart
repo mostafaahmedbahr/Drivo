@@ -1,6 +1,7 @@
 import 'package:drivo/main_importants.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+import '../widgets/lang.dart';
 import '../widgets/list_tile_list_item.dart';
 
 class MoreScreen extends StatelessWidget {
@@ -55,6 +56,7 @@ class MoreScreen extends StatelessWidget {
 
               },
             ),
+            Lang(),
 
           ]),
         ),

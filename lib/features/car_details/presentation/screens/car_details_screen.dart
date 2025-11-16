@@ -19,8 +19,7 @@ class CarDetailsScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             CarNameAndDes(),
             verticalSpace(20),
@@ -31,8 +30,7 @@ class CarDetailsScreen extends StatelessWidget {
             ExpertEvaluation(),
             verticalSpace(20),
             PriceAndAnotherInfo(),
-            verticalSpace(20),
-            Spacer(),
+            verticalSpace(60),
             RentAndReservationButtons(),
             verticalSpace(20),
 

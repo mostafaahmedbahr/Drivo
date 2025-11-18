@@ -1,7 +1,7 @@
 class ArLang {
   static const Map<String, dynamic> ar = {
     "appName": "درايفوو",
-    "loginMember": "تسجيل الدخول كعضو",
+    "loginMember": "تسجيل الدخول",
     "idNumber": "رقم الهوية",
     "passcode": "كلمة المرور",
     "forgetPassword": "هل نسيت كلمة المرور؟",
@@ -27,7 +27,7 @@ class ArLang {
     "myReservations": "حجوزاتي",
     "reservation": "حجز",
     "offers": "العروض",
-    "chooseYourCarNow": "اختر سيارتك الآن",
+    "chooseYourCarNow": "احجز سيارتك الآن",
     "dateOfReceipt": "تاريخ الاستلام",
     "timeOfReceipt": "وقت الاستلام",
     "fuelType": "نوع الوقود",
@@ -65,14 +65,15 @@ class ArLang {
     "branch": "الفرع",
     "choosePickupLocation": "اختر مكان الاستلام",
     "deliveryToAnotherLocation": "التسليم ف مكان اخر",
-    'bestCars' : "افضل السيارات",
+    'bestCars' : "السيارات الأكثر حجزًا",
     "viewAll": "عرض الكل",
     "language": "اللغة",
     "selectLanguage": "اختر اللغة",
     "changeLanguage": "تغيير اللغة",
     "languageChangedTo": "تم تغيير اللغة إلى العربية",
     "soon": "قريباً",
-    "cancel": "إلغاء"
+    "cancel": "إلغاء",
+    "selectBirthDate": "اختر تاريخ الميلاد",
 
   };
 }

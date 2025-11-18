@@ -9,7 +9,7 @@ class ProfileMenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, color: Colors.blue[700]),
+      leading: Icon(icon, color: AppColors.orange.withValues(alpha: .5)),
       title: Text(
         title,
         style: const TextStyle(

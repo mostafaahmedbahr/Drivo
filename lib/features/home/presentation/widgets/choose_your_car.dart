@@ -24,18 +24,19 @@ class ChooseYourCar extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: ExpansionTileCard(
-                baseColor: AppColors.whiteColor,
-                expandedColor: AppColors.whiteColor,
+                baseColor: AppColors.greyColor2,
+                expandedColor: AppColors.greyColor2,
                 key: cardA,
                 title:  Text(LocaleKeys.chooseYourCarNow.tr(), style: AppStyles.semiBold18Black),
                 children: <Widget>[
                   Divider(
                     thickness: 1.0,
                     height: 1.0,
+                    color: AppColors.whiteColor,
                   ),
                   verticalSpace(12),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 18),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -88,7 +89,7 @@ class ChooseYourCar extends StatelessWidget {
                           return Colors.transparent;
                         }),
                         side: const BorderSide(
-                          color: AppColors.greyColor1,
+                          color: AppColors.shipGray,
                           width: 2.0,
                         ),
                         onChanged: (bool? value) {

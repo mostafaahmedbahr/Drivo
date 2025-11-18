@@ -156,16 +156,16 @@ class ContractCardItem extends StatelessWidget {
                     btnText: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const Icon(Icons.download, size: 18,color: AppColors.whiteColor,),
+                        const Icon(Icons.download, size: 18,color: AppColors.orange,),
                         Text(LocaleKeys.download.tr(),style: TextStyle(
-                          color: AppColors.whiteColor
+                          color: AppColors.orange
                         ),),
                       ],
                     ),
                     height: 38,
                     onPressed: () {},
-                    btnColor: Colors.blue[800],
-                    borderColor: Colors.blue[800],
+                    btnColor: AppColors.whiteColor,
+                    borderColor:  AppColors.orange,
                   ),
                 ),
 

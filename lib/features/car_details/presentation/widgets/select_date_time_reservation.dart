@@ -11,6 +11,7 @@ class DateTimeBottomSheet {
     final carDetailsCubit = context.read<CarDetailsCubit>();
 
     showModalBottomSheet(
+      useSafeArea: true,
       context: context,
       isScrollControlled: true,
       backgroundColor: AppColors.whiteColor,
@@ -51,7 +52,7 @@ class _DateTimeSelectionContentState extends State<DateTimeSelectionContent> {
 
     return Padding(
       padding: EdgeInsets.only(
-        bottom: MediaQuery.of(context).viewInsets.bottom,
+        bottom: MediaQuery.of(context).viewInsets.bottom+30,
       ),
       child: Container(
         padding: const EdgeInsets.all(20),

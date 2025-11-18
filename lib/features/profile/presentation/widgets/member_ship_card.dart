@@ -11,12 +11,15 @@ class MembershipCard extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Colors.blue[800]!, Colors.purple[800]!],
+          colors: [
+            AppColors.orange.withValues(alpha: 0.8),
+            AppColors.neonCarrot.withValues(alpha: 0.6),
+          ],
         ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.blue.withValues(alpha: 0.3),
+            color: AppColors.orange.withValues(alpha: 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -25,7 +28,7 @@ class MembershipCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -33,43 +36,44 @@ class MembershipCard extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+
                 ),
               ),
-              Icon(Icons.workspace_premium, color: Colors.amber),
+              Icon(Icons.workspace_premium, color: Colors.white),
             ],
           ),
           verticalSpace(8),
-          const Text(
+          Text(
             'تنتهي في 15 ديسمبر 2024',
             style: TextStyle(
               fontSize: 14,
-              color: Colors.white70,
+
             ),
           ),
           verticalSpace(16),
           LinearProgressIndicator(
             value: 0.7,
-            backgroundColor: Colors.white.withValues(alpha: 0.3),
-            valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
+            backgroundColor: Colors.white.withValues(alpha: 0.2),
+            valueColor: AlwaysStoppedAnimation<Color>(
+              Colors.white.withValues(alpha: 0.7),
+            ),
             borderRadius: BorderRadius.circular(10),
           ),
           verticalSpace(8),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 '70% مكتمل',
                 style: TextStyle(
                   fontSize: 12,
-                  color: Colors.white70,
                 ),
               ),
               Text(
                 'تبقى 3 أشهر',
                 style: TextStyle(
                   fontSize: 12,
-                  color: Colors.white70,
+
                 ),
               ),
             ],
@@ -80,18 +84,17 @@ class MembershipCard extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.blue[800],
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
                 padding: const EdgeInsets.symmetric(vertical: 12),
               ),
-              child: const Text(
+              child: Text(
                 'تجديد العضوية',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
+                  color: AppColors.orange ,
                 ),
               ),
             ),

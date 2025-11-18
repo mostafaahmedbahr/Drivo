@@ -1,6 +1,6 @@
 import 'package:drivo/features/register/presentation/cubit/register_states.dart';
 import 'package:easy_localization/easy_localization.dart';
-
+import 'package:jhijri/_src/_jHijri.dart';
 import '../../../../main_importants.dart';
 
 class RegisterCubit extends Cubit<RegisterStates> {
@@ -21,5 +21,18 @@ class RegisterCubit extends Cubit<RegisterStates> {
     LocaleKeys.cooperationCouncil.tr(),
     LocaleKeys.visitor.tr(),
   ];
+
+  DateTime? selectedDate;
+  JHijri? selectedHijriDate;
+  void selectDate(DateTime date) {
+    selectedDate = date;
+    emit(SelectBirthDateState());
+  }
+  void selectHijriDate(JHijri date) {
+    selectedHijriDate = date;
+    emit(SelectBirthDateState());
+  }
+
+
 
 }

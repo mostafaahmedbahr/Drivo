@@ -52,7 +52,7 @@ class ProfileMenuListItems extends StatelessWidget {
             trailing: Switch(
               value: true,
               onChanged: (value) {},
-              activeColor: Colors.blue[800],
+              activeColor: AppColors.orange,
             ),
           ),
           _buildDivider(),

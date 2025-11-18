@@ -14,7 +14,12 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView(
-            children: [ChooseYourCar(), OfferSliderImages(), BestCars()],
+            children: [
+              ChooseYourCar(),
+              BestCars(),
+              OfferSliderImages(),
+              verticalSpace(12),
+            ],
           ),
         ),
       ),

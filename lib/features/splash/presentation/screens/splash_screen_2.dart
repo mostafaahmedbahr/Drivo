@@ -1,5 +1,5 @@
 import 'dart:async';
-  import 'package:drivo/main_importants.dart';
+ import 'package:drivo/main_importants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -22,13 +22,23 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: Image.asset(
-          PngImages.splash,
-          fit: BoxFit.cover,
-        ),
+      body: Stack(
+        // alignment: Alignment.center,
+        children: [
+          SizedBox(
+            height: double.infinity,
+            width: double.infinity,
+            child: Image.asset(
+              PngImages.splash,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned(
+              bottom: MediaQuery.of(context).size.height*0.30,
+              left: 40,
+              right: 40,
+              child: Image.asset(PngImages.logo)),
+        ],
       ),
     );
   }

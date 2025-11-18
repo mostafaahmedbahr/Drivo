@@ -14,7 +14,7 @@ class ContractsFilter extends StatelessWidget {
           height: 54,
           width: 54,
           decoration: BoxDecoration(
-            color: Colors.blue[800],
+            color: AppColors.shipGray,
             borderRadius: BorderRadius.circular(8),
           ),
           child: IconButton(

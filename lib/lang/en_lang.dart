@@ -1,7 +1,7 @@
 class EnLang {
   static const Map<String, dynamic> en = {
     "appName": "Drivo",
-    "loginMember": "Login as a Member",
+    "loginMember": "Login",
     "idNumber": "ID Number",
     "passcode": "Passcode",
     "forgetPassword": "Forgot Password?",
@@ -27,7 +27,7 @@ class EnLang {
     "myReservations": "booking",
     "reservation": "Reservation",
     "offers": "Offers",
-    "chooseYourCarNow": "Choose Your Car Now",
+    "chooseYourCarNow": "Book Your Car Now",
     "dateOfReceipt": "Date of Receipt",
     "timeOfReceipt": "Time of Receipt",
     "fuelType": "Fuel Type",
@@ -65,13 +65,14 @@ class EnLang {
     "branch": "Branch",
     "choosePickupLocation": "Choose Pickup Location",
     "deliveryToAnotherLocation": "Delivery to another location",
-    "bestCars" : "Best Cars",
+    "bestCars" : "Most booked cars",
     "viewAll": "View All",
     "language": "Language",
     "selectLanguage": "Select Language",
     "changeLanguage": "Change Language",
     "languageChangedTo": "Language changed to English",
     "soon": "Soon",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "selectBirthDate": "Select Birth Date",
   };
 }

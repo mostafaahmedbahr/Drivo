@@ -38,6 +38,7 @@ class BestCars extends StatelessWidget {
             return const CarItem(fullWidth: false,);
           },
         ),
+        verticalSpace(20),
       ],
     );
   }

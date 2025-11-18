@@ -12,6 +12,11 @@ class RegisterCubit extends Cubit<RegisterStates> {
   toggleTypes(int index)
   {
     typeIndex = index;
+    if(typeIndex==0){
+      selectedDate=null;
+    }else{
+      selectedHijriDate=null;
+    }
     emit(ToggleTypesState());
   }
 

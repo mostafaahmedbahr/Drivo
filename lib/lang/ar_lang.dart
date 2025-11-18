@@ -14,7 +14,7 @@ class ArLang {
     "phoneValidate": "التحقق من الهاتف",
     "country": "دولة",
     "email": "بريد إلكتروني",
-    "location": "موقع",
+    "location": "العنوان",
     "saudi": "سعودي",
     "resident": "مقيم",
     "cooperationCouncil": "مجلس التعاون",

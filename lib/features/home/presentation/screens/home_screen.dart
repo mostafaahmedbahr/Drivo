@@ -16,9 +16,9 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             children: [
               ChooseYourCar(),
-              BestCars(),
-              OfferSliderImages(),
               verticalSpace(12),
+              OfferSliderImages(),
+              BestCars(),
             ],
           ),
         ),

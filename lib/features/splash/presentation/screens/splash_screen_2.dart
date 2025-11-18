@@ -37,7 +37,8 @@ class _SplashScreenState extends State<SplashScreen> {
               bottom: MediaQuery.of(context).size.height*0.30,
               left: 40,
               right: 40,
-              child: Image.asset(PngImages.logo)),
+              child: Image.asset(PngImages.logo,color:
+              AppColors.neonCarrot.withValues(alpha: .6))),
         ],
       ),
     );

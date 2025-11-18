@@ -14,7 +14,7 @@ class EnLang {
     "phoneValidate": "phoneValidate",
     "country": "country",
     "email": "email",
-    "location": "location",
+    "location": "Addess",
     "saudi": "saudi",
     "resident": "resident",
     "cooperationCouncil": "cooperationCouncil",

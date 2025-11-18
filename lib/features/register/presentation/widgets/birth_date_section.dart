@@ -11,7 +11,7 @@ class BirthDateSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<RegisterCubit, RegisterStates>(
-      buildWhen: (_, current) => current is SelectBirthDateState,
+      buildWhen: (_, current) => current is SelectBirthDateState||current is ToggleTypesState,
       builder: (context, state) {
         var cubit = context.read<RegisterCubit>();
 
@@ -28,7 +28,7 @@ class BirthDateSection extends StatelessWidget {
             : LocaleKeys.selectBirthDate.tr() :
          cubit.selectedDate != null
         ? '${cubit.selectedDate!.day}/${cubit.selectedDate!.month}/${cubit.selectedDate!.year}'
-            : LocaleKeys.dateOfReceipt.tr(),
+            : LocaleKeys.selectBirthDate.tr(),
 
           onPressed: () async {
             if (cubit.typeIndex == 0) {

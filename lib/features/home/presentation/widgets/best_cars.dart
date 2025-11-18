@@ -33,7 +33,7 @@ class BestCars extends StatelessWidget {
             mainAxisSpacing: 12,
             childAspectRatio: 1,
           ),
-          itemCount: 10,
+          itemCount: 6,
           itemBuilder: (context, index) {
             return const CarItem(fullWidth: false,);
           },

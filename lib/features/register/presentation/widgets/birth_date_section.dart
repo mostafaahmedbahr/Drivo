@@ -20,7 +20,7 @@ class BirthDateSection extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: SvgPicture.asset(SvgImages.calendar,colorFilter: ColorFilter.mode(AppColors.orange, BlendMode.srcIn)),
           ),
-          hintColor: AppColors.greyColor1,
+          hintColor: AppColors.blackColor,
           hintText:
           cubit.typeIndex==0?
           cubit.selectedHijriDate != null

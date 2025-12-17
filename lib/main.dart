@@ -19,7 +19,7 @@ void main() async {
   String? token = await CacheTokenManger.getUserToken();
   debugPrint("Retrieved token: $token");
   await CacheHelper.init();
-  setup();
+  await setupGetIt();
   Bloc.observer = SimpleBlocObserver();
   runApp(EasyLocalization(
       startLocale: const Locale('ar',""),

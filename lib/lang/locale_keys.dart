@@ -74,6 +74,54 @@ abstract class LocaleKeys {
   static const soon = "soon";
   static const cancel = "cancel";
   static const selectBirthDate = "selectBirthDate";
+  static const String nameRequired = 'nameRequired';
+  static const String nameTooShort = 'nameTooShort';
+  static const String nameTooLong = 'nameTooLong';
+  static const String nameNoNumbers = 'nameNoNumbers';
+  static const String nameNoSpecialChars = 'nameNoSpecialChars';
+  static const String messageRequired = 'messageRequired';
+  static const String messageTooShort = 'messageTooShort';
+  static const String messageTooLong = 'messageTooLong';
+  static const String emailRequired = 'emailRequired';
+  static const String emailInvalid = 'emailInvalid';
+  static const String emailNoSpaces = 'emailNoSpaces';
+  static const String emailInvalidDots = 'emailInvalidDots';
+  static const String emailMultipleAt = 'emailMultipleAt';
+  static const String passwordRequired = 'passwordRequired';
+  static const String passwordRequirements = 'passwordRequirements';
+  static const String passwordMinLength = 'passwordMinLength';
+  static const String passwordMaxLength = 'passwordMaxLength';
+  static const String passwordRequireUppercase = 'passwordRequireUppercase';
+  static const String passwordRequireLowercase = 'passwordRequireLowercase';
+  static const String passwordRequireNumber = 'passwordRequireNumber';
+  static const String passwordRequireSpecial = 'passwordRequireSpecial';
+  static const String urlRequired = 'urlRequired';
+  static const String urlInvalid = 'urlInvalid';
+  static const String urlMissingProtocol = 'urlMissingProtocol';
+  static const String repeatPasswordRequired = 'repeatPasswordRequired';
+  static const String enterPasswordFirst = 'enterPasswordFirst';
+  static const String passwordsDontMatch = 'passwordsDontMatch';
+  static const String phoneRequired = 'phoneRequired';
+  static const String phoneEgyptInvalid = 'phoneEgyptInvalid';
+  static const String phoneUSInvalid = 'phoneUSInvalid';
+  static const String phoneInternationalInvalid = 'phoneInternationalInvalid';
+  static const String name = 'name';
+  static const String fullName = 'fullName';
+  static const String password = 'password';
+  static const String confirmPassword = 'confirmPassword';
+  static const String message = 'message';
+  static const String url = 'url';
+
+
+
+  static const String companyName = 'companyName';
+  static const String optional = 'optional';
+  static const String accountCreatedSuccessfully = 'accountCreatedSuccessfully';
+  static const String idNumberValidate = 'idNumberValidate';
+  static const String idNumberLength = 'idNumberLength';
+  static const String addressValidate = 'addressValidate';
+  static const String somethingWentWrongPleaseTryAgain = 'somethingWentWrongPleaseTryAgain';
+  static const String loginSuccessfully = 'loginSuccessfully';
 
 
 

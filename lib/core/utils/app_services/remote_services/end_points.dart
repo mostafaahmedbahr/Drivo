@@ -1,8 +1,8 @@
 class EndPoints {
 
-  static const baseUrl = "";
-  static const login = "";
-
+  static const baseUrl = "http://adwaacar.westeurope.cloudapp.azure.com:8080/api/";
+  static const login = "Renters/mobile/Login";
+  static const register = "Renters/CreateRenter";
 
 
 

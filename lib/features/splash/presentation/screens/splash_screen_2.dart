@@ -1,23 +1,20 @@
 import 'dart:async';
-import 'package:drivo/core/utils/app_images/png_images.dart';
-import 'package:drivo/features/login/presentation/screens/login_screen.dart';
-import 'package:drivo/main_importants.dart';
+ import 'package:drivo/main_importants.dart';
 
-class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplashScreen2> createState() => _SplashScreen2State();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreen2State extends State<SplashScreen2> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // تأخير لمدة 3 ثواني ثم الانتقال للشاشة التالية
     Future.delayed(const Duration(seconds: 2), () {
       if(mounted){
-        AppNav.customNavigator(context: context, screen: LoginScreen());
+        context.pushNamed(Routes.loginScreen);
       }
     });
   }
@@ -25,13 +22,24 @@ class _SplashScreen2State extends State<SplashScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: Image.asset(
-          PngImages.splash,
-          fit: BoxFit.cover,
-        ),
+      body: Stack(
+        // alignment: Alignment.center,
+        children: [
+          SizedBox(
+            height: double.infinity,
+            width: double.infinity,
+            child: Image.asset(
+              PngImages.splash,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned(
+              bottom: MediaQuery.of(context).size.height*0.30,
+              left: 40,
+              right: 40,
+              child: Image.asset(PngImages.logo,color:
+              AppColors.neonCarrot.withValues(alpha: .6))),
+        ],
       ),
     );
   }

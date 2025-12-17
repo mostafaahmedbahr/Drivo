@@ -13,8 +13,8 @@ platform :android do
         firebase_cli_token: "1//03BLCHuegA9HYCgYIARAAGAMSNwF-L9IrmtSbtbd4_V5wgFIM_WaAa-HDLTIdmzUwsZBianQByF95G9SfuhwRPmYWOGP3I1vDha0",
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk",
-        testers: "mustafa.bahr12323@gmail.com",
-        release_notes: "",
+        testers: "mustafa.bahr12323@gmail.com , ygohar@gmail.com",
+        release_notes: "test the ui part 2",
   )
   end
 end

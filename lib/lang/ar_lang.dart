@@ -111,6 +111,14 @@ class ArLang {
     "confirmPassword": "تأكيد كلمة المرور",
     "message": "الرسالة",
     "url": "الرابط",
+    "companyName": "اسم الشركة",
+    "optional": "اختياري",
+    "accountCreatedSuccessfully": "تم إنشاء الحساب بنجاح",
+    "idNumberValidate": "الرجاء إدخال رقم الهوية",
+    "idNumberLength": "يجب أن يتكون رقم الهوية من ١٠ أرقام",
+    "addressValidate": "الرجاء إدخال العنوان",
+    "somethingWentWrongPleaseTryAgain": "حدث خطأ، الرجاء المحاولة مرة أخرى",
+    "loginSuccessfully": "تم تسجيل الدخول بنجاح",
 
   };
 }

@@ -111,5 +111,14 @@ class EnLang {
     "confirmPassword": "Confirm Password",
     "message": "Message",
     "url": "URL",
+    "companyName": "Company Name",
+    "optional": "Optional",
+    "accountCreatedSuccessfully": "Account created successfully",
+    "idNumberValidate": "Please enter ID number",
+    "idNumberLength": "ID number must be 10 digits",
+    "addressValidate": "Please enter address",
+    "somethingWentWrongPleaseTryAgain": "Something went wrong, please try again",
+    "loginSuccessfully": "Login successful",
+
   };
 }

@@ -111,9 +111,6 @@ abstract class LocaleKeys {
   static const String confirmPassword = 'confirmPassword';
   static const String message = 'message';
   static const String url = 'url';
-
-
-
   static const String companyName = 'companyName';
   static const String optional = 'optional';
   static const String accountCreatedSuccessfully = 'accountCreatedSuccessfully';

@@ -12,8 +12,8 @@ import '../widgets/price_and_another_info.dart';
 import '../widgets/rent_and_reservation_buttons.dart';
 
 class CarDetailsScreen extends StatelessWidget {
-  const CarDetailsScreen({super.key});
-
+  const CarDetailsScreen({super.key, required this.carId});
+  final int carId;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class CarDetailsScreen extends StatelessWidget {
                 children: [
                   CarNameAndDes(name: car?.brand??"", des:  car?.model??"", rate:  car?.carLevel??""),
                   verticalSpace(20),
-                  CarSliderImages(),
+                  CarSliderImages(image: car?.imageUrl??"",),
                   verticalSpace(20),
                   CarFeatures(),
                   verticalSpace(20),

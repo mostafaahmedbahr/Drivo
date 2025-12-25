@@ -106,6 +106,12 @@ Future<void> setupGetIt() async {
       carDetailsRepos: getIt<CarDetailsRepos>(),
     ),
   );
+  getIt.registerLazySingleton<GetAllCarsUseCase>(
+        () => GetAllCarsUseCase(
+      homeRepos: getIt<HomeRepos>(),
+    ),
+  );
+
 
   /// Cubit
   getIt.registerFactory<RegisterCubit>(

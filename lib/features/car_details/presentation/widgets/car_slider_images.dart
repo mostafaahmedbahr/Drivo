@@ -4,8 +4,8 @@ import '../cubit/car_details_cubit.dart';
 import '../cubit/car_details_states.dart';
 
 class CarSliderImages extends StatelessWidget {
-  const CarSliderImages({super.key});
-
+  const CarSliderImages({super.key, required this.image});
+  final String image;
   final List<String> carImages = const [
     "https://www.topgear.com/sites/default/files/news-listicle/image/2023/09/LEAD.jpg?w=827&h=465",
     // "https://www.topgear.com/sites/default/files/2023/09/1%20Volvo_XC40_0.jpg?w=827&h=465",
@@ -31,7 +31,7 @@ class CarSliderImages extends StatelessWidget {
           child: CustomNetWorkImage(
             width: double.infinity,
             height: 170,
-            imageUrl: carImages[0],
+            imageUrl: image,
             raduis: 16,
             fit: BoxFit.cover,
           ),

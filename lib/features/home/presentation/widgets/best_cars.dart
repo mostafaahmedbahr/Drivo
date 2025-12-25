@@ -25,7 +25,7 @@ class BestCars extends StatelessWidget {
                   children: [
                     Text(LocaleKeys.bestCars.tr(),style: AppStyles.semiBold18Black,),
                     TextButton(onPressed: (){
-                      context.pushNamed(Routes.allCarsScreen);
+                      context.pushNamed(Routes.allCarsScreen,);
                     }, child: Text(LocaleKeys.viewAll.tr(),style: TextStyle(
                         color: AppColors.orange
                     ),))

@@ -12,7 +12,9 @@ class CarItem extends StatelessWidget {
     final double cardRadius = 16;
     return InkWell(
       onTap: (){
-        context.pushNamed(Routes.carDetailsScreen);
+        context.pushNamed(Routes.carDetailsScreen,arguments: {
+        "carId" :  car!.carId,
+        });
       },
       child: Card(
         color: AppColors.whiteColor,
@@ -28,8 +30,24 @@ class CarItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("${car?.type}", style: AppStyles.semiBold14Black),
-                  Text("${car?.plateNumber}", style: AppStyles.semiBold14Black),
+                  Expanded( // Wrap first text with Expanded
+                    child: Text(
+                      "${car?.type}",
+                      style: AppStyles.semiBold14Black,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  ),
+                  const SizedBox(width: 8), // Add spacing between texts
+                  Expanded( // Wrap second text with Expanded
+                    child: Text(
+                      "${car?.carLevel}",
+                      style: AppStyles.semiBold14Black,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      textAlign: TextAlign.end,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -42,34 +60,46 @@ class CarItem extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 36,
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  decoration: BoxDecoration(
-                    color: AppColors.orange,
-                    borderRadius: BorderRadius.only(
-                      bottomRight:
-                      !isArabic ? Radius.zero : Radius.circular(cardRadius),
-                      topLeft:
-                      !isArabic ? Radius.zero : Radius.circular(cardRadius),
-                      bottomLeft:
-                      !isArabic ? Radius.circular(cardRadius) : Radius.zero,
-                      topRight:
-                      !isArabic ? Radius.circular(cardRadius) : Radius.zero,
+                Flexible( // Use Flexible instead of fixed width container
+                  child: Container(
+                    constraints: BoxConstraints(
+                      maxWidth: MediaQuery.of(context).size.width * 0.4, // Limit to 40% of width
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      LocaleKeys.reservation.tr(),
-                      style: AppStyles.medium12White,
+                    height: 36,
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    decoration: BoxDecoration(
+                      color: AppColors.orange,
+                      borderRadius: BorderRadius.only(
+                        bottomRight:
+                        !isArabic ? Radius.zero : Radius.circular(cardRadius),
+                        topLeft:
+                        !isArabic ? Radius.zero : Radius.circular(cardRadius),
+                        bottomLeft:
+                        !isArabic ? Radius.circular(cardRadius) : Radius.zero,
+                        topRight:
+                        !isArabic ? Radius.circular(cardRadius) : Radius.zero,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        LocaleKeys.reservation.tr(),
+                        style: AppStyles.medium12White,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsetsGeometry.directional(end:  8.0),
-                  child: Text(
-                    "80 ريال/يوم",
-                    style: AppStyles.medium12Black,
+                Flexible( // Also wrap the price text
+                  child: Padding(
+                    padding: const EdgeInsetsGeometry.directional(end:  8.0),
+                    child: Text(
+                      "80 ريال/يوم",
+                      style: AppStyles.medium12Black,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      textAlign: TextAlign.end,
+                    ),
                   ),
                 ),
               ],

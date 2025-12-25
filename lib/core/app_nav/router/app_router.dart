@@ -41,12 +41,15 @@ class AppRouter {
           ),
         );
       case Routes.carDetailsScreen:
+        final args = arguments as Map<String, dynamic>;
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => CarDetailsCubit(
               getCarDetailsByIdUseCase: getIt<GetCarDetailsByIdUseCase>(),
+            )..getCarDetailsById(carId: args['carId'] as int),
+            child:   CarDetailsScreen(
+                carId: args['carId'] as int
             ),
-            child: const CarDetailsScreen(),
           ),
         );
       case Routes.allCarsScreen:

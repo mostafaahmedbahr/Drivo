@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             getAllCitiesUseCase: getIt<GetAllCitiesUseCase>(),
             getAllCarsUseCase: getIt<GetAllCarsUseCase>(),
             getAllBranchesByCityIdUseCase: getIt<GetAllBranchesByCityIdUseCase>(),
-          )..getAllCities(),
+          )..getAllCities()..getAllCars(),
         ),
         BlocProvider(create: (context) => LanguageCubit()),
       ],

@@ -6,6 +6,7 @@ import 'package:drivo/features/layout/presentation/screens/layout_screen.dart';
 import 'package:drivo/features/login/presentation/screens/login_screen.dart';
 import 'package:drivo/features/register/presentation/screens/register_screen.dart';
 import '../../../features/booking/presentation/screens/booking_screen.dart';
+import '../../../features/car_details/domain/usecases/get_car_by_id_use_case.dart';
 import '../../../features/car_details/presentation/screens/car_gallery_images_screen.dart';
 import '../../../features/contracts/presentation/screens/contracts_screen.dart';
 import '../../../features/more/presentation/screens/more_screen.dart';
@@ -13,6 +14,7 @@ import '../../../features/notifications/presentation/screens/notifications_scree
 import '../../../features/profile/presentation/screens/profile_screen.dart';
 import '../../../features/splash/presentation/screens/splash_screen_2.dart';
 import '../../../main_importants.dart';
+import '../../utils/app_services/remote_services/service_locator.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -41,7 +43,9 @@ class AppRouter {
       case Routes.carDetailsScreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => CarDetailsCubit(),
+            create: (context) => CarDetailsCubit(
+              getCarDetailsByIdUseCase: getIt<GetCarDetailsByIdUseCase>(),
+            ),
             child: const CarDetailsScreen(),
           ),
         );

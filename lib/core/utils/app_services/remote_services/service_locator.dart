@@ -2,6 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:drivo/features/home/domain/usecases/get_all_branches_by_city_id_usecase.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../../../features/car_details/data/data_source/remote_data_source.dart';
+import '../../../../features/car_details/data/repos_imple/car_details_repos_impl.dart';
+import '../../../../features/car_details/domain/repos/car_details_repos.dart';
+import '../../../../features/car_details/domain/usecases/get_car_by_id_use_case.dart';
+import '../../../../features/car_details/presentation/cubit/car_details_cubit.dart';
 import '../../../../features/home/data/data_source/remote_data_source.dart';
 import '../../../../features/home/data/repos_imple/home_repos_impl.dart';
 import '../../../../features/home/domain/repos/home_repos.dart';
@@ -47,6 +52,11 @@ Future<void> setupGetIt() async {
       apiService: getIt<ApiService>(),
     ),
   );
+  getIt.registerLazySingleton<CarDetailsRemoteDataSource>(
+        () => CarDetailsRemoteDataSource(
+      apiService: getIt<ApiService>(),
+    ),
+  );
 
   /// Repositories
   getIt.registerLazySingleton<RegisterRepository>(
@@ -62,6 +72,11 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<HomeRepos>(
         () => HomeReposImple(
       homeRemoteDataSource: getIt<HomeRemoteDataSource>(),
+    ),
+  );
+  getIt.registerLazySingleton<CarDetailsRepos>(
+        () => CarDetailsReposImple(
+          carDetailsRemoteDataSource: getIt<CarDetailsRemoteDataSource>(),
     ),
   );
 
@@ -86,6 +101,11 @@ Future<void> setupGetIt() async {
       homeRepos: getIt<HomeRepos>(),
     ),
   );
+  getIt.registerLazySingleton<GetCarDetailsByIdUseCase>(
+        () => GetCarDetailsByIdUseCase(
+      carDetailsRepos: getIt<CarDetailsRepos>(),
+    ),
+  );
 
   /// Cubit
   getIt.registerFactory<RegisterCubit>(
@@ -103,6 +123,12 @@ Future<void> setupGetIt() async {
           getAllCitiesUseCase: getIt<GetAllCitiesUseCase>(),
           getAllCarsUseCase: getIt<GetAllCarsUseCase>(),
           getAllBranchesByCityIdUseCase: getIt<GetAllBranchesByCityIdUseCase>(),
+    ),
+  );
+  getIt.registerFactory<CarDetailsCubit>(
+        () => CarDetailsCubit(
+      getCarDetailsByIdUseCase: getIt<GetCarDetailsByIdUseCase>(),
+
     ),
   );
 }

@@ -1,3 +1,5 @@
+import 'package:drivo/features/car_details/data/models/car_details_model.dart';
+import 'package:drivo/features/car_details/domain/usecases/get_car_by_id_use_case.dart';
 import 'package:drivo/features/car_details/presentation/widgets/car_feature_item.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -6,8 +8,8 @@ import '../widgets/evaluation_item.dart';
 import 'car_details_states.dart';
 
 class CarDetailsCubit extends Cubit<CarDetailsStates> {
-  CarDetailsCubit() : super(CarDetailsInitState());
-
+  CarDetailsCubit({required this.getCarDetailsByIdUseCase}) : super(CarDetailsInitState());
+  final GetCarDetailsByIdUseCase getCarDetailsByIdUseCase;
   static CarDetailsCubit get(context) => BlocProvider.of(context);
 
   int _currentSlide = 0;
@@ -65,4 +67,21 @@ class CarDetailsCubit extends Cubit<CarDetailsStates> {
     EvaluationItem(title: LocaleKeys.comfort.tr(), value: 2),
     EvaluationItem(title: LocaleKeys.consumption.tr(), value: 3),
   ];
+
+
+
+  CarDetailsModel? carDetailsModel;
+  Future<void> getCarDetailsById({required int carId}) async {
+    emit(GetCarDetailsLoadingState());
+    final result = await getCarDetailsByIdUseCase.call(carId: carId);
+    result.fold(
+          (failure) => emit(GetCarDetailsErrorState(failure.errMessage.toString())),
+          (carDetails){
+            carDetailsModel = carDetails;
+        emit(GetCarDetailsSuccessState(carDetails));
+      },
+    );
+  }
+
+
 }

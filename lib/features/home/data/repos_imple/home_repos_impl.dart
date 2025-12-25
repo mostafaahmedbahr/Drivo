@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:drivo/features/home/data/models/all_branches_by_city_id_model.dart';
+import 'package:drivo/features/home/data/models/all_cars_model.dart';
 import '../../../../core/errors/error_handler.dart';
 import '../../../../core/errors/failure.dart';
 import '../../domain/repos/home_repos.dart';
@@ -31,4 +32,17 @@ class HomeReposImple extends HomeRepos {
       return Left(handleError(e));
     }
   }
+
+
+  @override
+  Future<Either<Failure, AllCarsModel>> getAllCars() async {
+    try {
+      final result = await homeRemoteDataSource.getAllCars();
+      return Right(result);
+    } catch (e) {
+      return Left(handleError(e));
+    }
+  }
+
+
 }

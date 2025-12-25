@@ -1,6 +1,8 @@
 import 'package:drivo/features/home/data/models/all_branches_by_city_id_model.dart';
 import 'package:drivo/features/home/data/models/all_cities_model.dart';
 
+import '../../data/models/all_cars_model.dart';
+
 abstract class HomeStates{}
 
 class HomeInitState extends HomeStates{}
@@ -34,5 +36,18 @@ class GetAllBranchesByCityIdErrorState extends HomeStates{
 class GetAllBranchesByCityIdSuccessState extends HomeStates{
   final AllBranchesByCityIdModel allBranchesByCityIdModel;
   GetAllBranchesByCityIdSuccessState(this.allBranchesByCityIdModel);
+
+}
+
+
+class GetAllCarsLoadingState extends HomeStates{}
+class GetAllCarsErrorState extends HomeStates{
+  final String error;
+  GetAllCarsErrorState(this.error);
+
+}
+class GetAllCarsSuccessState extends HomeStates{
+  final AllCarsModel allCarsModel;
+  GetAllCarsSuccessState(this.allCarsModel);
 
 }

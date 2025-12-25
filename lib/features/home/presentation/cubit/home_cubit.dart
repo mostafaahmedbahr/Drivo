@@ -4,14 +4,17 @@ import 'package:drivo/features/home/domain/usecases/get_all_cities_usecase.dart'
 
 import '../../../../main_importants.dart';
 import '../../data/models/all_branches_by_city_id_model.dart'  ;
+import '../../data/models/all_cars_model.dart';
+import '../../domain/usecases/get_all_cars_usecase.dart';
 import 'home_states.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
-  HomeCubit({required this.getAllCitiesUseCase , required this.getAllBranchesByCityIdUseCase}) : super(HomeInitState());
+  HomeCubit({required this.getAllCarsUseCase ,required this.getAllCitiesUseCase , required this.getAllBranchesByCityIdUseCase}) : super(HomeInitState());
 
   static HomeCubit get(context) => BlocProvider.of(context);
 
   final GetAllCitiesUseCase getAllCitiesUseCase;
+  final GetAllCarsUseCase getAllCarsUseCase;
   final GetAllBranchesByCityIdUseCase getAllBranchesByCityIdUseCase;
 
 
@@ -102,6 +105,21 @@ class HomeCubit extends Cubit<HomeStates> {
           (branches){
             allBranchesByCityIdModel = branches;
         emit(GetAllBranchesByCityIdSuccessState(branches));
+      },
+    );
+  }
+
+
+
+  AllCarsModel? allCarsModel;
+  Future<void> getAllCars() async {
+    emit(GetAllCarsLoadingState());
+    final result = await getAllCarsUseCase.call();
+    result.fold(
+          (failure) => emit(GetAllCarsErrorState(failure.errMessage.toString())),
+          (cities){
+        allCarsModel = cities;
+        emit(GetAllCarsSuccessState(cities));
       },
     );
   }

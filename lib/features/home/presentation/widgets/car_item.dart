@@ -1,9 +1,11 @@
+import 'package:drivo/features/home/data/models/all_cars_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import '../../../../main_importants.dart';
 
 class CarItem extends StatelessWidget {
-  const CarItem({super.key, required this.fullWidth});
+  const CarItem({super.key, required this.fullWidth,   this.car});
   final bool fullWidth;
+  final Data? car;
   @override
   Widget build(BuildContext context) {
     final bool isArabic = Localizations.localeOf(context).languageCode == 'ar';
@@ -26,8 +28,8 @@ class CarItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("هيونداي", style: AppStyles.semiBold14Black),
-                  Text("سوناتا", style: AppStyles.semiBold14Black),
+                  Text("${car?.type}", style: AppStyles.semiBold14Black),
+                  Text("${car?.plateNumber}", style: AppStyles.semiBold14Black),
                 ],
               ),
             ),

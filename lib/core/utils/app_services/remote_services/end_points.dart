@@ -5,6 +5,7 @@ class EndPoints {
   static const register = "Renters/CreateRenter";
   static const cities = "ControlPanel/GetAllCities";
   static const branchesByCityId = "Services/GetBranchesByCityId";
+  static const cars = "Cars/GetCars/10";
 
 
 

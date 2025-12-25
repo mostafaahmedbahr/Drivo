@@ -1,6 +1,7 @@
 import 'package:drivo/core/utils/app_services/remote_services/api_service.dart';
 import 'package:drivo/core/utils/app_services/remote_services/end_points.dart';
 import 'package:drivo/features/home/data/models/all_branches_by_city_id_model.dart';
+import '../models/all_cars_model.dart';
 import '../models/all_cities_model.dart';
 
 class HomeRemoteDataSource {
@@ -21,4 +22,10 @@ class HomeRemoteDataSource {
     });
     return AllBranchesByCityIdModel.fromJson(response.data);
   }
+
+  Future<AllCarsModel> getAllCars() async {
+    final response = await apiService.getData(endPoint: EndPoints.cars);
+    return AllCarsModel.fromJson(response.data);
+  }
+
 }

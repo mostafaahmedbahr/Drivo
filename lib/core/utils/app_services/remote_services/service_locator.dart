@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import '../../../../features/home/data/data_source/remote_data_source.dart';
 import '../../../../features/home/data/repos_imple/home_repos_impl.dart';
 import '../../../../features/home/domain/repos/home_repos.dart';
+import '../../../../features/home/domain/usecases/get_all_cars_usecase.dart';
 import '../../../../features/home/domain/usecases/get_all_cities_usecase.dart';
 import '../../../../features/home/presentation/cubit/home_cubit.dart';
 import '../../../../features/login/data/data_source/remote_data_source.dart';
@@ -100,6 +101,7 @@ Future<void> setupGetIt() async {
   getIt.registerFactory<HomeCubit>(
         () => HomeCubit(
           getAllCitiesUseCase: getIt<GetAllCitiesUseCase>(),
+          getAllCarsUseCase: getIt<GetAllCarsUseCase>(),
           getAllBranchesByCityIdUseCase: getIt<GetAllBranchesByCityIdUseCase>(),
     ),
   );

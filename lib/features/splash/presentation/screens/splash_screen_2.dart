@@ -14,7 +14,13 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
       if(mounted){
-        context.pushNamed(Routes.loginScreen);
+          final String? userToken = CacheTokenManger.userToken;
+          if ( userToken != null && userToken.isNotEmpty) {
+            context.pushNamed(Routes.layoutScreen);
+          } else {
+            context.pushNamed(Routes.loginScreen);
+          }
+
       }
     });
   }

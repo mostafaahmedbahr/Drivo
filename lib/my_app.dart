@@ -1,4 +1,7 @@
- import 'package:drivo/features/home/presentation/cubit/home_cubit.dart';
+ import 'package:drivo/core/utils/app_services/remote_services/service_locator.dart';
+import 'package:drivo/features/home/domain/usecases/get_all_branches_by_city_id_usecase.dart';
+import 'package:drivo/features/home/domain/usecases/get_all_cities_usecase.dart';
+import 'package:drivo/features/home/presentation/cubit/home_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'core/shared_widgets/cubits/lang_cubit/lang_cubit.dart';
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => LayoutCubit()),
-        BlocProvider(create: (context) => HomeCubit()),
+        BlocProvider(create: (context) => HomeCubit(getAllCitiesUseCase: getIt<GetAllCitiesUseCase>(),getAllBranchesByCityIdUseCase: getIt<GetAllBranchesByCityIdUseCase>())..getAllCities()),
         BlocProvider(create: (context) => LanguageCubit()),
       ],
       child: MaterialApp(

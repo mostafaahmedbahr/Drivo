@@ -26,6 +26,7 @@ class LoginButtons extends StatelessWidget {
                 context: context,
               );
               context.pushNamedAndRemoveAll(Routes.layoutScreen);
+              CacheTokenManger.saveUserToken(state.loginModel.token.toString());
             } else if (state is LoginErrorState) {
               Toast.showErrorToast(
                 msg: state.error.toString(),

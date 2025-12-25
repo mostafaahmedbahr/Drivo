@@ -1,27 +1,51 @@
+import 'package:drivo/features/home/data/models/all_cities_model.dart';
+import 'package:drivo/features/home/domain/usecases/get_all_branches_by_city_id_usecase.dart';
+import 'package:drivo/features/home/domain/usecases/get_all_cities_usecase.dart';
+
 import '../../../../main_importants.dart';
+import '../../data/models/all_branches_by_city_id_model.dart'  ;
 import 'home_states.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
-  HomeCubit() : super(HomeInitState());
+  HomeCubit({required this.getAllCitiesUseCase , required this.getAllBranchesByCityIdUseCase}) : super(HomeInitState());
 
   static HomeCubit get(context) => BlocProvider.of(context);
 
+  final GetAllCitiesUseCase getAllCitiesUseCase;
+  final GetAllBranchesByCityIdUseCase getAllBranchesByCityIdUseCase;
 
-  String? selectedCity;
-  String? selectedBranch;
+
+
+  Cities? selectedCity;
+  Branches? selectedBranch;
+  void selectCity(Cities? city) {
+    selectedCity = city;
+    selectedBranch = null;
+
+    emit(HomeCitySelectedState());
+
+    if (city?.cityId != null) {
+      getAllBranchesByCityId(cityId: city!.cityId!);
+    }
+
+    print("Selected City From: ${city?.cityNameAr}");
+  }
+
+
+  void selectBranch(Branches? branch) {
+    selectedBranch = branch;
+    emit(HomeBranchSelectedState());
+    print("Selected Branches From: ${branch?.branchName}");
+  }
+
+
+
+
+
+
   String? selectedCityTo;
   String? selectedBranchTo;
 
-  final List<String> cities = [
-    'Cairo',
-    'Giza',
-    'Alexandria',
-    'Beni Suef',
-    'Luxor',
-    'Aswan',
-    'Port Said',
-    'Suez',
-  ];
 
   final List<String> branches = [
     'Downtown Branch',
@@ -32,17 +56,6 @@ class HomeCubit extends Cubit<HomeStates> {
     'New Cairo Branch',
   ];
 
-  void selectCity(String? city) {
-    selectedCity = city;
-    selectedBranch = null;
-    emit(HomeCitySelectedState());
-    print('Selected City: $selectedCity');
-  }
-  void selectBranch(String? branch) {
-    selectedBranch = branch;
-    emit(HomeBranchSelectedState());
-    print('Selected Branch: $selectedBranch');
-  }
 
   void selectCityTo(String? cityTo) {
     selectedCityTo = cityTo;
@@ -63,4 +76,34 @@ class HomeCubit extends Cubit<HomeStates> {
     isChecked = value;
     emit(ChangeCheckboxValueState());
   }
+
+
+
+  AllCitiesModel? allCitiesModel;
+  Future<void> getAllCities() async {
+    emit(GetAllCitiesLoadingState());
+    final result = await getAllCitiesUseCase.call();
+    result.fold(
+          (failure) => emit(GetAllCitiesErrorState(failure.errMessage.toString())),
+          (cities){
+            allCitiesModel = cities;
+            emit(GetAllCitiesSuccessState(cities));
+          },
+    );
+  }
+
+
+  AllBranchesByCityIdModel? allBranchesByCityIdModel;
+  Future<void> getAllBranchesByCityId({required int cityId}) async {
+    emit(GetAllBranchesByCityIdLoadingState());
+    final result = await getAllBranchesByCityIdUseCase.call(cityId: cityId);
+    result.fold(
+          (failure) => emit(GetAllBranchesByCityIdErrorState(failure.errMessage.toString())),
+          (branches){
+            allBranchesByCityIdModel = branches;
+        emit(GetAllBranchesByCityIdSuccessState(branches));
+      },
+    );
+  }
+
 }

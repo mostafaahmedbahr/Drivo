@@ -1,6 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:drivo/features/home/domain/usecases/get_all_branches_by_city_id_usecase.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../../../features/home/data/data_source/remote_data_source.dart';
+import '../../../../features/home/data/repos_imple/home_repos_impl.dart';
+import '../../../../features/home/domain/repos/home_repos.dart';
+import '../../../../features/home/domain/usecases/get_all_cities_usecase.dart';
+import '../../../../features/home/presentation/cubit/home_cubit.dart';
 import '../../../../features/login/data/data_source/remote_data_source.dart';
 import '../../../../features/login/data/repos_imple/login_repos_imple.dart';
 import '../../../../features/login/domain/repos/login_repos.dart';
@@ -35,6 +41,11 @@ Future<void> setupGetIt() async {
       apiService: getIt<ApiService>(),
     ),
   );
+  getIt.registerLazySingleton<HomeRemoteDataSource>(
+        () => HomeRemoteDataSource(
+      apiService: getIt<ApiService>(),
+    ),
+  );
 
   /// Repositories
   getIt.registerLazySingleton<RegisterRepository>(
@@ -45,6 +56,11 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<LoginRepos>(
         () => LoginReposImple(
           loginRemoteDataSource: getIt<LoginRemoteDataSource>(),
+    ),
+  );
+  getIt.registerLazySingleton<HomeRepos>(
+        () => HomeReposImple(
+      homeRemoteDataSource: getIt<HomeRemoteDataSource>(),
     ),
   );
 
@@ -59,6 +75,16 @@ Future<void> setupGetIt() async {
           loginRepos: getIt<LoginRepos>(),
     ),
   );
+  getIt.registerLazySingleton<GetAllCitiesUseCase>(
+        () => GetAllCitiesUseCase(
+      homeRepos: getIt<HomeRepos>(),
+    ),
+  );
+  getIt.registerLazySingleton<GetAllBranchesByCityIdUseCase>(
+        () => GetAllBranchesByCityIdUseCase(
+      homeRepos: getIt<HomeRepos>(),
+    ),
+  );
 
   /// Cubit
   getIt.registerFactory<RegisterCubit>(
@@ -69,6 +95,12 @@ Future<void> setupGetIt() async {
   getIt.registerFactory<LoginCubit>(
         () => LoginCubit(
       loginWithPasswordUseCase: getIt<LoginWithPasswordUseCase>(),
+    ),
+  );
+  getIt.registerFactory<HomeCubit>(
+        () => HomeCubit(
+          getAllCitiesUseCase: getIt<GetAllCitiesUseCase>(),
+          getAllBranchesByCityIdUseCase: getIt<GetAllBranchesByCityIdUseCase>(),
     ),
   );
 }
